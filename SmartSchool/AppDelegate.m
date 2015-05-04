@@ -13,7 +13,7 @@
 #import "TalkMainViewController.h"
 #import "MineMainViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -23,46 +23,73 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50];
-    
-    [_tabBarController setMinimumHeightToDisplayTitle:40.0];
-    
+    _window.backgroundColor = [UIColor whiteColor];
     NewsMainViewController *newsView = [[NewsMainViewController alloc]init];
+    TaskMainViewController *taskView = [[TaskMainViewController alloc] init];
+    MapsMainViewController *mapsView = [[MapsMainViewController alloc] init];
+    TalkMainViewController *talksView = [[TalkMainViewController alloc] init];
+    MineMainViewController *mineView = [[MineMainViewController alloc] init];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newsView];
-    navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+    _newsNavViewController = [[UINavigationController alloc] initWithRootViewController:newsView];
+    _newsNavViewController.tabBarItem.title = @"微信";
+    _newsNavViewController.tabBarItem.image = [UIImage imageNamed:@"icon_tabbar_news"];
+    _newsNavViewController.tabBarItem.badgeValue = @"3";
+    
+    _taskNavViewController = [[UINavigationController alloc] initWithRootViewController:taskView];
+    _mapsNavViewController = [[UINavigationController alloc] initWithRootViewController:mapsView];
+    _talkNavViewController = [[UINavigationController alloc] initWithRootViewController:talksView];
+    _mineNavViewController = [[UINavigationController alloc] initWithRootViewController:mineView];
+    
+    if ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7) {
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:0.0]];
+        //设置状态栏
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        _newsNavViewController.navigationBar.translucent = NO;
+        _taskNavViewController.navigationBar.translucent = NO;
+        _mapsNavViewController.navigationBar.translucent = NO;
+        _talkNavViewController.navigationBar.translucent = NO;
+        _mineNavViewController.navigationBar.translucent = NO;
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0]];
+    }
     
     [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
-                                           newsView,
-                                           [[TaskMainViewController alloc] init],
-                                           [[MapsMainViewController alloc] init],
-                                           [[TalkMainViewController alloc] init],
-                                           [[MineMainViewController alloc] init],nil]];
-    // Tabs Colors settings
-    [_tabBarController setTabColors:@[[UIColor whiteColor],
-                                      [UIColor whiteColor]]]; // MAX 2 Colors
-    _tabBarController.tabStrokeColor = [UIColor whiteColor];
-    //分隔线颜色
-    _tabBarController.tabEdgeColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+                                           _newsNavViewController,
+                                           _taskNavViewController,
+                                           _mapsNavViewController,
+                                           _talkNavViewController,
+                                           _mineNavViewController,
+                                           nil]];
+    
     _tabBarController.hidesBottomBarWhenPushed = YES;
-    //图标颜色
-    [_tabBarController setIconColors:@[[UIColor colorWithRed:149.0/255.0 green:146.0/255.0 blue:147.0/255.0 alpha:1.0],
-                                       [UIColor colorWithRed:149.0/255.0 green:146.0/255.0 blue:147.0/255.0 alpha:1.0]]]; // MAX 2 Colors
-    //选中图标颜色
-    [_tabBarController setSelectedIconColors:@[[UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0],
-                                               [UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0]]]; // MAX 2 Colors
-    //文字颜色
-    [_tabBarController setTextColor:[UIColor colorWithRed:149.0/255.0 green:146.0/255.0 blue:147.0/255.0 alpha:1.0]];
-    //选中文字颜色
-    [_tabBarController setSelectedTextColor:[UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0]];
-    //文字字号
-    _tabBarController.textFont = [UIFont fontWithName:@"Helvetica-Bold" size:11.0];
+    _tabBarController.selectedIndex = 0;
+    _tabBarController.delegate = self;
+    _window.userInteractionEnabled = YES;
     [_window setRootViewController:_tabBarController];
     [_window makeKeyAndVisible];
+#pragma mark - 设置TabBarController
     
+    // 创建TabBarController
+    UITabBarController * tabBarController = [[UITabBarController alloc]init];
+    
+    //CGRect frame = CGRectMake(0, 20, 320, 44);
+    //tabBarController.tabBar.frame = frame;
+    
+    // 设置着色
+    _tabBarController.tabBar.tintColor = [UIColor greenColor];
+    // 设置选中图片时候
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor brownColor];
+    // 设置背景图片(自己没有图片,不进行设置)
+    
+    
+    tabBarController.selectedIndex = 3;
+    
+    
+    self.window.rootViewController = tabBarController;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -22,6 +22,7 @@
 		CD8D7F501AF70787000B70A5 /* TaskMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F4E1AF70787000B70A5 /* TaskMainViewController.xib */; };
 		CD8D7F541AF707AF000B70A5 /* MineMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F521AF707AF000B70A5 /* MineMainViewController.m */; };
 		CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */; };
+		CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F591AF7238D000B70A5 /* backgroud_lightgray.png */; };
 		CDB8AABF1AF700DD00A200C8 /* icon_tabbar_map.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB51AF700DD00A200C8 /* icon_tabbar_map.png */; };
 		CDB8AAC01AF700DD00A200C8 /* icon_tabbar_map_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB61AF700DD00A200C8 /* icon_tabbar_map_selected.png */; };
 		CDB8AAC11AF700DD00A200C8 /* icon_tabbar_news.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB71AF700DD00A200C8 /* icon_tabbar_news.png */; };
@@ -74,6 +75,7 @@
 		CD8D7F511AF707AF000B70A5 /* MineMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMainViewController.h; sourceTree = "<group>"; };
 		CD8D7F521AF707AF000B70A5 /* MineMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMainViewController.m; sourceTree = "<group>"; };
 		CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMainViewController.xib; sourceTree = "<group>"; };
+		CD8D7F591AF7238D000B70A5 /* backgroud_lightgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroud_lightgray.png; sourceTree = "<group>"; };
 		CDB8AAB51AF700DD00A200C8 /* icon_tabbar_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_map.png; sourceTree = "<group>"; };
 		CDB8AAB61AF700DD00A200C8 /* icon_tabbar_map_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_map_selected.png; sourceTree = "<group>"; };
 		CDB8AAB71AF700DD00A200C8 /* icon_tabbar_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_news.png; sourceTree = "<group>"; };
@@ -189,9 +191,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD8D7F581AF7238D000B70A5 /* backgroud */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D7F591AF7238D000B70A5 /* backgroud_lightgray.png */,
+			);
+			path = backgroud;
+			sourceTree = "<group>";
+		};
 		CDB8AAB31AF700D100A200C8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CD8D7F581AF7238D000B70A5 /* backgroud */,
 				CDB8AAB41AF700DD00A200C8 /* icon_tabbar */,
 			);
 			path = Images;
@@ -379,6 +390,7 @@
 				CDB8AAC31AF700DD00A200C8 /* icon_tabbar_talkwith.png in Resources */,
 				CDB8AAC81AF700DD00A200C8 /* icon_tabbar_user_selected.png in Resources */,
 				CDB8AAC21AF700DD00A200C8 /* icon_tabbar_news_selected.png in Resources */,
+				CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */,
 				CD8D7F4B1AF7076B000B70A5 /* TalkMainViewController.xib in Resources */,
 				CDB8AAC51AF700DD00A200C8 /* icon_tabbar_task.png in Resources */,
 				CD8D7F501AF70787000B70A5 /* TaskMainViewController.xib in Resources */,

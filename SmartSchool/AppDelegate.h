@@ -12,8 +12,12 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (nonatomic, strong) AKTabBarController *tabBarController;
+@property (nonatomic, strong) UINavigationController* mapsNavViewController;
+@property (nonatomic, strong) UINavigationController* taskNavViewController;
+@property (nonatomic, strong) UINavigationController* mineNavViewController;
+@property (nonatomic, strong) UINavigationController* newsNavViewController;
+@property (nonatomic, strong) UINavigationController* talkNavViewController;
+@property (nonatomic, strong) UITabBarController *tabBarController;
 
 @end
 
