@@ -1,7 +1,7 @@
 FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/BmobSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BmobSDK" "${PODS_ROOT}/Headers/Public/RKTabView"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BmobSDK" -isystem "${PODS_ROOT}/Headers/Public/RKTabView"
-OTHER_LDFLAGS = -ObjC -l"Pods-BmobSDK" -l"Pods-RKTabView" -l"icucore" -l"sqlite3" -l"z.1.2.5" -framework "AVFoundation" -framework "BmobSDK" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "MediaPlayer" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AKTabBarController" "${PODS_ROOT}/Headers/Public/BmobSDK"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AKTabBarController" -isystem "${PODS_ROOT}/Headers/Public/BmobSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-AKTabBarController" -l"icucore" -l"sqlite3" -l"z.1.2.5" -framework "AVFoundation" -framework "BmobSDK" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "MediaPlayer" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

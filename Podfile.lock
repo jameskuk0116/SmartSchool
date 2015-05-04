@@ -1,13 +1,13 @@
 PODS:
+  - AKTabBarController (1.1.0)
   - BmobSDK (1.5.4)
-  - RKTabView (1.0.1)
 
 DEPENDENCIES:
+  - AKTabBarController
   - BmobSDK
-  - RKTabView (~> 1.0.1)
 
 SPEC CHECKSUMS:
+  AKTabBarController: 6a250b798852e58a663a3bc438b400fedb82c20f
   BmobSDK: b16dc6328f1b9a9fee96312a401cdd712f4193b3
-  RKTabView: 4f95c634f0cdf590e793dbb138ca03d54b6897a0
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.4
