@@ -15,6 +15,14 @@
 		5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F151ADE9454005F0876 /* LaunchScreen.xib */; };
 		5D088F231ADE9455005F0876 /* SmartSchoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F221ADE9455005F0876 /* SmartSchoolTests.m */; };
 		BABF7064EA10929A1FD146D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84293381DF87931ADC1CB678 /* libPods.a */; };
+		CD8D7F451AF70756000B70A5 /* MapsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F431AF70756000B70A5 /* MapsMainViewController.m */; };
+		CD8D7F461AF70756000B70A5 /* MapsMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F441AF70756000B70A5 /* MapsMainViewController.xib */; };
+		CD8D7F4A1AF7076B000B70A5 /* TalkMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F481AF7076B000B70A5 /* TalkMainViewController.m */; };
+		CD8D7F4B1AF7076B000B70A5 /* TalkMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F491AF7076B000B70A5 /* TalkMainViewController.xib */; };
+		CD8D7F4F1AF70787000B70A5 /* TaskMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F4D1AF70787000B70A5 /* TaskMainViewController.m */; };
+		CD8D7F501AF70787000B70A5 /* TaskMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F4E1AF70787000B70A5 /* TaskMainViewController.xib */; };
+		CD8D7F541AF707AF000B70A5 /* MineMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F521AF707AF000B70A5 /* MineMainViewController.m */; };
+		CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */; };
 		CDB8AABF1AF700DD00A200C8 /* icon_tabbar_map.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB51AF700DD00A200C8 /* icon_tabbar_map.png */; };
 		CDB8AAC01AF700DD00A200C8 /* icon_tabbar_map_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB61AF700DD00A200C8 /* icon_tabbar_map_selected.png */; };
 		CDB8AAC11AF700DD00A200C8 /* icon_tabbar_news.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB71AF700DD00A200C8 /* icon_tabbar_news.png */; };
@@ -25,6 +33,9 @@
 		CDB8AAC61AF700DD00A200C8 /* icon_tabbar_task_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABC1AF700DD00A200C8 /* icon_tabbar_task_selected.png */; };
 		CDB8AAC71AF700DD00A200C8 /* icon_tabbar_user.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABD1AF700DD00A200C8 /* icon_tabbar_user.png */; };
 		CDB8AAC81AF700DD00A200C8 /* icon_tabbar_user_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABE1AF700DD00A200C8 /* icon_tabbar_user_selected.png */; };
+		CDB8AAD21AF7060800A200C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB8AAD11AF7060800A200C8 /* BaseViewController.m */; };
+		CDB8AAD61AF7064A00A200C8 /* NewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB8AAD41AF7064A00A200C8 /* NewsMainViewController.m */; };
+		CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +65,18 @@
 		5D088F221ADE9455005F0876 /* SmartSchoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartSchoolTests.m; sourceTree = "<group>"; };
 		84293381DF87931ADC1CB678 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DFA5746D662A72EE498BBA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CD8D7F421AF70756000B70A5 /* MapsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsMainViewController.h; sourceTree = "<group>"; };
+		CD8D7F431AF70756000B70A5 /* MapsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsMainViewController.m; sourceTree = "<group>"; };
+		CD8D7F441AF70756000B70A5 /* MapsMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsMainViewController.xib; sourceTree = "<group>"; };
+		CD8D7F471AF7076B000B70A5 /* TalkMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkMainViewController.h; sourceTree = "<group>"; };
+		CD8D7F481AF7076B000B70A5 /* TalkMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkMainViewController.m; sourceTree = "<group>"; };
+		CD8D7F491AF7076B000B70A5 /* TalkMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkMainViewController.xib; sourceTree = "<group>"; };
+		CD8D7F4C1AF70787000B70A5 /* TaskMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskMainViewController.h; sourceTree = "<group>"; };
+		CD8D7F4D1AF70787000B70A5 /* TaskMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskMainViewController.m; sourceTree = "<group>"; };
+		CD8D7F4E1AF70787000B70A5 /* TaskMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskMainViewController.xib; sourceTree = "<group>"; };
+		CD8D7F511AF707AF000B70A5 /* MineMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMainViewController.h; sourceTree = "<group>"; };
+		CD8D7F521AF707AF000B70A5 /* MineMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMainViewController.m; sourceTree = "<group>"; };
+		CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMainViewController.xib; sourceTree = "<group>"; };
 		CDB8AAB51AF700DD00A200C8 /* icon_tabbar_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_map.png; sourceTree = "<group>"; };
 		CDB8AAB61AF700DD00A200C8 /* icon_tabbar_map_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_map_selected.png; sourceTree = "<group>"; };
 		CDB8AAB71AF700DD00A200C8 /* icon_tabbar_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_news.png; sourceTree = "<group>"; };
@@ -64,6 +87,11 @@
 		CDB8AABC1AF700DD00A200C8 /* icon_tabbar_task_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_task_selected.png; sourceTree = "<group>"; };
 		CDB8AABD1AF700DD00A200C8 /* icon_tabbar_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_user.png; sourceTree = "<group>"; };
 		CDB8AABE1AF700DD00A200C8 /* icon_tabbar_user_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_user_selected.png; sourceTree = "<group>"; };
+		CDB8AAD01AF7060800A200C8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		CDB8AAD11AF7060800A200C8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		CDB8AAD31AF7064A00A200C8 /* NewsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainViewController.h; sourceTree = "<group>"; };
+		CDB8AAD41AF7064A00A200C8 /* NewsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainViewController.m; sourceTree = "<group>"; };
+		CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +143,8 @@
 				5D088F101ADE9454005F0876 /* Main.storyboard */,
 				5D088F131ADE9454005F0876 /* Images.xcassets */,
 				5D088F151ADE9454005F0876 /* LaunchScreen.xib */,
+				CDB8AACF1AF705E600A200C8 /* BaseClass */,
+				CDB8AAC91AF705D500A200C8 /* ViewControllers */,
 				CDB8AAB31AF700D100A200C8 /* Images */,
 				5D088F061ADE9454005F0876 /* Supporting Files */,
 			);
@@ -187,6 +217,77 @@
 				CDB8AABE1AF700DD00A200C8 /* icon_tabbar_user_selected.png */,
 			);
 			path = icon_tabbar;
+			sourceTree = "<group>";
+		};
+		CDB8AAC91AF705D500A200C8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDB8AACC1AF705D500A200C8 /* News */,
+				CDB8AACA1AF705D500A200C8 /* Maps */,
+				CDB8AACD1AF705D500A200C8 /* Talk */,
+				CDB8AACE1AF705D500A200C8 /* Task */,
+				CDB8AACB1AF705D500A200C8 /* Mine */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CDB8AACA1AF705D500A200C8 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D7F421AF70756000B70A5 /* MapsMainViewController.h */,
+				CD8D7F431AF70756000B70A5 /* MapsMainViewController.m */,
+				CD8D7F441AF70756000B70A5 /* MapsMainViewController.xib */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
+		CDB8AACB1AF705D500A200C8 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D7F511AF707AF000B70A5 /* MineMainViewController.h */,
+				CD8D7F521AF707AF000B70A5 /* MineMainViewController.m */,
+				CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		CDB8AACC1AF705D500A200C8 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CDB8AAD31AF7064A00A200C8 /* NewsMainViewController.h */,
+				CDB8AAD41AF7064A00A200C8 /* NewsMainViewController.m */,
+				CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CDB8AACD1AF705D500A200C8 /* Talk */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D7F471AF7076B000B70A5 /* TalkMainViewController.h */,
+				CD8D7F481AF7076B000B70A5 /* TalkMainViewController.m */,
+				CD8D7F491AF7076B000B70A5 /* TalkMainViewController.xib */,
+			);
+			path = Talk;
+			sourceTree = "<group>";
+		};
+		CDB8AACE1AF705D500A200C8 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				CD8D7F4C1AF70787000B70A5 /* TaskMainViewController.h */,
+				CD8D7F4D1AF70787000B70A5 /* TaskMainViewController.m */,
+				CD8D7F4E1AF70787000B70A5 /* TaskMainViewController.xib */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		CDB8AACF1AF705E600A200C8 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				CDB8AAD01AF7060800A200C8 /* BaseViewController.h */,
+				CDB8AAD11AF7060800A200C8 /* BaseViewController.m */,
+			);
+			path = BaseClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +376,7 @@
 				CDB8AAC71AF700DD00A200C8 /* icon_tabbar_user.png in Resources */,
 				CDB8AAC41AF700DD00A200C8 /* icon_tabbar_talkwith_selected.png in Resources */,
 				CDB8AAC11AF700DD00A200C8 /* icon_tabbar_news.png in Resources */,
+				CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */,
 				5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */,
 				CDB8AAC01AF700DD00A200C8 /* icon_tabbar_map_selected.png in Resources */,
 				5D088F141ADE9454005F0876 /* Images.xcassets in Resources */,
@@ -282,7 +384,11 @@
 				CDB8AAC31AF700DD00A200C8 /* icon_tabbar_talkwith.png in Resources */,
 				CDB8AAC81AF700DD00A200C8 /* icon_tabbar_user_selected.png in Resources */,
 				CDB8AAC21AF700DD00A200C8 /* icon_tabbar_news_selected.png in Resources */,
+				CD8D7F4B1AF7076B000B70A5 /* TalkMainViewController.xib in Resources */,
 				CDB8AAC51AF700DD00A200C8 /* icon_tabbar_task.png in Resources */,
+				CD8D7F501AF70787000B70A5 /* TaskMainViewController.xib in Resources */,
+				CD8D7F461AF70756000B70A5 /* MapsMainViewController.xib in Resources */,
+				CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */,
 				CDB8AAC61AF700DD00A200C8 /* icon_tabbar_task_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,8 +441,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D088F0F1ADE9454005F0876 /* ViewController.m in Sources */,
+				CD8D7F541AF707AF000B70A5 /* MineMainViewController.m in Sources */,
+				CDB8AAD21AF7060800A200C8 /* BaseViewController.m in Sources */,
+				CD8D7F4F1AF70787000B70A5 /* TaskMainViewController.m in Sources */,
+				CD8D7F4A1AF7076B000B70A5 /* TalkMainViewController.m in Sources */,
+				CD8D7F451AF70756000B70A5 /* MapsMainViewController.m in Sources */,
 				5D088F0C1ADE9454005F0876 /* AppDelegate.m in Sources */,
 				5D088F091ADE9454005F0876 /* main.m in Sources */,
+				CDB8AAD61AF7064A00A200C8 /* NewsMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

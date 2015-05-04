@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AKTabBarController.h"
 
 @interface ViewController : UIViewController
 
-
+@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) AKTabBarController *tabBarController;
 @end
 

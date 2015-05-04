@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "NewsMainViewController.h"
+#import "TaskMainViewController.h"
+#import "MapsMainViewController.h"
+#import "TalkMainViewController.h"
+#import "MineMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +22,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50];
+    
+    [_tabBarController setMinimumHeightToDisplayTitle:40.0];
+    
+    NewsMainViewController *newsView = [[NewsMainViewController alloc]init];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newsView];
+    navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+    
+    [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
+                                           newsView,
+                                           [[TaskMainViewController alloc] init],
+                                           [[MapsMainViewController alloc] init],
+                                           [[TalkMainViewController alloc] init],
+                                           [[MineMainViewController alloc] init],nil]];
+    
+    [_window setRootViewController:_tabBarController];
+    [_window makeKeyAndVisible];
     
     return YES;
 }
