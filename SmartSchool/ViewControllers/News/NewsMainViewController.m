@@ -42,4 +42,9 @@
 {
     return @"icon_tabbar_news_selected";
 }
+
+- (NSString *)tabTitle
+{
+    return @"首页";
+}
 @end

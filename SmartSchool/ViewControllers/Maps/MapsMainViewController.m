@@ -42,4 +42,9 @@
 {
     return @"icon_tabbar_map_selected";
 }
+
+- (NSString *)tabTitle
+{
+    return @"地图";
+}
 @end

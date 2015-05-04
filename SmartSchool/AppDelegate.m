@@ -39,7 +39,25 @@
                                            [[MapsMainViewController alloc] init],
                                            [[TalkMainViewController alloc] init],
                                            [[MineMainViewController alloc] init],nil]];
-    
+    // Tabs Colors settings
+    [_tabBarController setTabColors:@[[UIColor whiteColor],
+                                      [UIColor whiteColor]]]; // MAX 2 Colors
+    _tabBarController.tabStrokeColor = [UIColor whiteColor];
+    //分隔线颜色
+    _tabBarController.tabEdgeColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
+    _tabBarController.hidesBottomBarWhenPushed = YES;
+    //图标颜色
+    [_tabBarController setIconColors:@[[UIColor colorWithRed:149.0/255.0 green:146.0/255.0 blue:147.0/255.0 alpha:1.0],
+                                       [UIColor colorWithRed:149.0/255.0 green:146.0/255.0 blue:147.0/255.0 alpha:1.0]]]; // MAX 2 Colors
+    //选中图标颜色
+    [_tabBarController setSelectedIconColors:@[[UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0],
+                                               [UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0]]]; // MAX 2 Colors
+    //文字颜色
+    [_tabBarController setTextColor:[UIColor colorWithRed:149.0/255.0 green:146.0/255.0 blue:147.0/255.0 alpha:1.0]];
+    //选中文字颜色
+    [_tabBarController setSelectedTextColor:[UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0]];
+    //文字字号
+    _tabBarController.textFont = [UIFont fontWithName:@"Helvetica-Bold" size:11.0];
     [_window setRootViewController:_tabBarController];
     [_window makeKeyAndVisible];
     

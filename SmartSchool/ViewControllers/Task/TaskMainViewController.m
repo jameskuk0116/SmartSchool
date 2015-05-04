@@ -42,4 +42,9 @@
 {
     return @"icon_tabbar_task_selected";
 }
+
+- (NSString *)tabTitle
+{
+    return @"任务";
+}
 @end

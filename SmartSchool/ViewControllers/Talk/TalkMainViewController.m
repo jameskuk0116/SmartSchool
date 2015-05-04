@@ -42,4 +42,9 @@
 {
     return @"icon_tabbar_talkwith_selected";
 }
+
+- (NSString *)tabTitle
+{
+    return @"聊天";
+}
 @end

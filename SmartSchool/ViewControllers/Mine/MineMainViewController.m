@@ -42,4 +42,9 @@
 {
     return @"icon_tabbar_user_selected";
 }
+
+- (NSString *)tabTitle
+{
+    return @"我的";
+}
 @end
