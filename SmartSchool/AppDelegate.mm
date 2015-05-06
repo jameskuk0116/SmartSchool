@@ -12,6 +12,7 @@
 #import "MapsMainViewController.h"
 #import "TalkMainViewController.h"
 #import "MineMainViewController.h"
+#import "RCIM.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>{
     
@@ -77,7 +78,7 @@
     [_window makeKeyAndVisible];
 
     // 设置选中图片时候
-    _tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:0.389 green:1.000 blue:0.000 alpha:1.000];
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:0.925 green:0.322 blue:0.043 alpha:1.000];
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
     BOOL ret = [_mapManager start:@"lrb9zzH6TNDAmZqGqaH0n7oG"  generalDelegate:nil];
@@ -85,9 +86,49 @@
         NSLog(@"manager start failed!");
     }
 
+    // 初始化 SDK，传入 App Key，deviceToken 暂时为空，等待获取权限。
+    [RCIM initWithAppKey:@"vnroth0krco6o" deviceToken:nil];
+    
+#ifdef __IPHONE_8_0
+    // 在 iOS 8 下注册苹果推送，申请推送权限。
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
+                                                                                         |UIUserNotificationTypeSound
+                                                                                         |UIUserNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+#else
+    // 注册苹果推送，申请推送权限。
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+#endif
     return YES;
 }
 
+#ifdef __IPHONE_8_0
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    // Register to receive notifications.
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+{
+    // Handle the actions.
+    if ([identifier isEqualToString:@"declineAction"]){
+    }
+    else if ([identifier isEqualToString:@"answerAction"]){
+    }
+}
+#endif
+
+// 获取苹果推送权限成功。
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // 设置 deviceToken。
+    [[RCIM sharedRCIM] setDeviceToken:deviceToken];
+}
+
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

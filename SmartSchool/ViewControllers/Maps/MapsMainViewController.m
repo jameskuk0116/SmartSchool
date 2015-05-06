@@ -19,14 +19,15 @@
     // Do any additional setup after loading the view from its nib.
     [self setTitle:@"地图"];
     
-    _mapView = [[BMKMapView alloc]initWithFrame:self.view.frame];
+    _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, _viewForShow.frame.size.width, _viewForShow.frame.size.height)];
     CLLocationCoordinate2D coor2;
     coor2.longitude = 108.913629;
     coor2.latitude = 34.221686;
     _mapView.centerCoordinate = coor2;
     _mapView.zoomLevel = 17;
     _mapView.scrollEnabled = YES;
-    self.view = _mapView;
+//    _mapView.showsUserLocation = YES;
+    [_viewForShow addSubview:_mapView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +48,8 @@
 {
     [_mapView viewWillAppear];
     _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    
+    _mapView.compassPosition = CGPointMake(20, 20);
     
     BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
     CLLocationCoordinate2D coor;

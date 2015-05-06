@@ -13,4 +13,5 @@
 
 @property (nonatomic , strong) BMKMapView *mapView;
 
+@property (weak, nonatomic) IBOutlet UIView *viewForShow;
 @end

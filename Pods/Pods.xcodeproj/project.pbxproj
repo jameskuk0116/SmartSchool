@@ -7,175 +7,572 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AF8CE9E2B3F92B19556A6B2 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AB10230D287358DB0794AF /* Pods-dummy.m */; };
-		BAE1666CA4297E17C921917E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FD8A38863D810832DD514E /* Foundation.framework */; };
+		025D46F7B436DE6B6CA3D3C4 /* RCPreviewViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 14BC6AA03CEE96FA8079DB5E /* RCPreviewViewController.h */; };
+		03B6FC189A34761E33685E18 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D923CDAFE79D0FF96DF1CCA /* CoreImage.framework */; };
+		052D5A77F9F8897010A4C0DE /* RCChatViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A004EC65A7D59030D1068D19 /* RCChatViewController.h */; };
+		0FED337BA15A1433159395CD /* RCThemeDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = E456DC8E291CCDD89B149FBB /* RCThemeDefine.h */; };
+		167994341128B09EC9A42624 /* if_rom.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C1203B68D49AFF274F1862 /* if_rom.h */; };
+		1947CA977B3966C4628F2B7E /* RCHandShakeMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = EA077F88058D34E73CF102E5 /* RCHandShakeMessage.h */; };
+		216FDD40A390D30CBECA0B27 /* RCRichContentMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = B07972C1E98968C076D7F134 /* RCRichContentMessage.h */; };
+		22DC4238F2009779A8CB590D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED23BF68C27BA282A79F2F4E /* QuartzCore.framework */; };
+		2B04D12D168F14E269876BF8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E296E0C5B5208A025127BE2 /* AudioToolbox.framework */; };
+		2BA377FDE376367A88A35ABA /* interf_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = AFBAA66700C61EA1ED029207 /* interf_enc.h */; };
+		2E6A50E485762EF8DA06F926 /* interf_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = 6169921F872B7863F86FF5DF /* interf_dec.h */; };
+		30BA7E63522247256F6D3270 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A565743EAAA01AE594985A7E /* Foundation.framework */; };
+		321EAB89E3CC4D17961D222F /* RCMessageContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4471B586803CBEA32E002D03 /* RCMessageContent.h */; };
+		323FC11FB66880C02B7A540F /* RCIMClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B99EC6CB4E891096FA22ED0A /* RCIMClient.h */; };
+		37351C152A453AD48241220B /* RCSuspendMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 473B8E72B6E93BDB1A4A17FC /* RCSuspendMessage.h */; };
+		37C2B91A7543EAE3D846D278 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79652FBCD4FE347AAB526104 /* CoreLocation.framework */; };
+		443EB98389442D4392F0E96E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7292342614B95C4B6FE3B /* CFNetwork.framework */; };
+		460EBAF65DBD8657A82F3337 /* RCUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = BD52ECA41873E1B6DBC6CF99 /* RCUserInfo.h */; };
+		55836E0626CCDED4E3D6F448 /* RCImageMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DB1E6CE119917CC5E121BCDA /* RCImageMessage.h */; };
+		56470E56CACCD03F0CF3D913 /* RCRenameViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F41A09C8CC0AC10432B051 /* RCRenameViewController.h */; };
+		58A2457E27D683E4DB909EBC /* RCLocationMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = FE2E82F9A8437B3018AFA66F /* RCLocationMessage.h */; };
+		5A1E5224DC63D2B850C7531E /* Pods-RongCloudIMKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF149F128DCDDF684A4E165D /* Pods-RongCloudIMKit-dummy.m */; };
+		5DAB0EFE264ED0C2C5A48FC7 /* dec_if.h in Headers */ = {isa = PBXBuildFile; fileRef = F34037EDF5EE7B1DB04F5214 /* dec_if.h */; };
+		64B36ADA30556C593FFDE85F /* RCClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D031D431201FD32FDC5E1A /* RCClientDelegate.h */; };
+		6F1B2C9F64C11CB6571E7859 /* RCStatusMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A87280E46FBB6976A2F95DE /* RCStatusMessage.h */; };
+		7B8BA632A182CCD09EADD436 /* RCBasicViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D80B4761AF49BBCA0E1757F4 /* RCBasicViewController.h */; };
+		7CA1248582CBECCF86C6D8D7 /* RCIMClientHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E702A8BAED77876577BBBCC /* RCIMClientHeader.h */; };
+		81C90B24C18BD968959C2968 /* RCIM.h in Headers */ = {isa = PBXBuildFile; fileRef = D57974DD798E3BA4016FAF94 /* RCIM.h */; };
+		821BF362792D75248398CCCD /* RCVoiceMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 6273F59C5E65A466A82B2AF4 /* RCVoiceMessage.h */; };
+		8FC6C56912B99EE6B4B99BF0 /* RCTextMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A2D3CB5E18B0C04B01E1D1 /* RCTextMessage.h */; };
+		99E326C2BA10C138B327E5CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F51DBF4EFBECE437BF743E /* CoreGraphics.framework */; };
+		A460260924D88D87F77D708D /* RCDiscussion.h in Headers */ = {isa = PBXBuildFile; fileRef = A9C8CDA603751645BD38DE62 /* RCDiscussion.h */; };
+		A50BDD3FD09237AD0C284C72 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E652E2AE4BBC57302C045EDD /* CoreTelephony.framework */; };
+		A67876025BCDB6D1C8FD4844 /* RCGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 63D29D4FF28EC61BA740B550 /* RCGroup.h */; };
+		A860C3DD04DAC8E80C6DB32F /* RCLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A1C682431D3C995948DF3684 /* RCLocationViewController.h */; };
+		AA8A94DF53B55F8631EFF77B /* RCContactNotificationMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 263331A30BC130B0C89DB826 /* RCContactNotificationMessage.h */; };
+		AB04D54AEE6595DB2AE4492B /* RCCommandNotificationMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = DB10E065E9029A8F944E1566 /* RCCommandNotificationMessage.h */; };
+		ADDA86273601BCB413B292E3 /* RCChatSettingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 897C47BBA85410F7C7417666 /* RCChatSettingViewController.h */; };
+		B09CB431DE0437084BFBD36B /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0350BE1F01E029A25B56322 /* Pods-dummy.m */; };
+		B2AF1F376783BC55904B671C /* RCGroupListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE90226A6F5558D4BC6992F1 /* RCGroupListViewController.h */; };
+		B5806994AB19CB3F37CCC5C7 /* RCChatListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BE933BEB5F5226F56E48C7 /* RCChatListViewController.h */; };
+		B8937E4C8C845175799985EE /* RCConversation.h in Headers */ = {isa = PBXBuildFile; fileRef = 91233072DC380FC77C47B4A7 /* RCConversation.h */; };
+		B97E170B2F3E89E5C9CC15F2 /* RCDiscussionNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BDE60BAA2DC0B5A83E8A114 /* RCDiscussionNotification.h */; };
+		BA34740B5E36587BD789AFFD /* RCSelectPersonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BBEA1091A15D7B0B13071DC /* RCSelectPersonViewController.h */; };
+		C0BE5BBE07AA320D1FE0629D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B86F34F2A30D398001A14E /* CoreAudio.framework */; };
+		CA51852A6B6F39CEDDE4CABE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D35DD09BC909964B44546D2 /* CoreMedia.framework */; };
+		CAE451FB88F32A69BC0D21B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A565743EAAA01AE594985A7E /* Foundation.framework */; };
+		CC1A1071CDE75CF93814CA9B /* RCProfileNotificationMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 52245D6AF7A4FF597DDBB1CA /* RCProfileNotificationMessage.h */; };
+		D0D8B2860832426D4C526014 /* RCMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F29606EECBD3977937E661C /* RCMessage.h */; };
+		DBB4460110D01C2625D7B8A6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4F0037DDFBD5703CCBC995 /* CoreVideo.framework */; };
+		DF7CD6B09676024671B49BF8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36B9E67059DDC47C2143073 /* SystemConfiguration.framework */; };
+		E473422736D9F80E25A028EE /* RCNotificationMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = A2EA2E8AACD2EF0C8D64A692 /* RCNotificationMessage.h */; };
+		E4C8CD030692A7244A0728CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B39455F9B1D7047FABB665D /* MapKit.framework */; };
+		E6B9A7FBE6CD7DF2FA981604 /* AmrDataConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C572FEB198BF403A57D5EAC /* AmrDataConverter.h */; };
+		EED4E79E9084EB0241C7CCA8 /* RCLocationPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A6EE4608F20A092DA38377 /* RCLocationPickerViewController.h */; };
+		F0AB85299F2CE8E1459A0A3E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523FCE954979F7638AC68F73 /* AVFoundation.framework */; };
+		F498169CEE71C6280DBCA4B1 /* RCStatusDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FFEFD24418ED2CDF83E4B68 /* RCStatusDefine.h */; };
+		F8FCF7F7E4CF065F3F40D2E0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C204CC4A81E24E6247CC5401 /* OpenGLES.framework */; };
+		FAA12D15B9D90FC2155D6DE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBECD5EFE4D9DDD119D3DDE2 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D0A844A31467867A4709E6BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82ACE39E04FAC050F07A8C83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCCAD3FBBC2856F35D18AE51;
+			remoteInfo = "Pods-RongCloudIMKit";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1C19B19A7E6E5458AE9EDDB5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		27B4B09604FCB702931FBE93 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		2F18E25094786DBCAD5081D2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		318A19211DC0623E1597CA45 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		4EA217C8BF2B40583A86DE99 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		80AB10230D287358DB0794AF /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		8801112E51E883B0DEDBC93C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		C7704B04F3CB3D6163A7998F /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		E5FD8A38863D810832DD514E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E717D465C8CD24BE57F619B4 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F0D1FD747714DA7BB58B1E10 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		018B34059463E9B0CA80AF31 /* Pods-RongCloudIMKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RongCloudIMKit.xcconfig"; sourceTree = "<group>"; };
+		03DCDCB1B5F740453AE7D468 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		07D2D1E968231D6CBB7BF87D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		09A6EE4608F20A092DA38377 /* RCLocationPickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCLocationPickerViewController.h; path = iOS_IMKit/Headers/RCLocationPickerViewController.h; sourceTree = "<group>"; };
+		0B05A2BA1CCA864BB26F7A6B /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		14BC6AA03CEE96FA8079DB5E /* RCPreviewViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCPreviewViewController.h; path = iOS_IMKit/Headers/RCPreviewViewController.h; sourceTree = "<group>"; };
+		1E702A8BAED77876577BBBCC /* RCIMClientHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCIMClientHeader.h; path = iOS_IMKit/Headers/RCIMClientHeader.h; sourceTree = "<group>"; };
+		2430D3A47DAD134F7E979570 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		263331A30BC130B0C89DB826 /* RCContactNotificationMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCContactNotificationMessage.h; path = iOS_IMKit/Headers/RCContactNotificationMessage.h; sourceTree = "<group>"; };
+		28F41A09C8CC0AC10432B051 /* RCRenameViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCRenameViewController.h; path = iOS_IMKit/Headers/RCRenameViewController.h; sourceTree = "<group>"; };
+		2B39455F9B1D7047FABB665D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		2BDE60BAA2DC0B5A83E8A114 /* RCDiscussionNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCDiscussionNotification.h; path = iOS_IMKit/Headers/RCDiscussionNotification.h; sourceTree = "<group>"; };
+		2E4F0037DDFBD5703CCBC995 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		2F29606EECBD3977937E661C /* RCMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCMessage.h; path = iOS_IMKit/Headers/RCMessage.h; sourceTree = "<group>"; };
+		42367FBAB260E7C30AA116D5 /* Pods-RongCloudIMKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RongCloudIMKit-Private.xcconfig"; sourceTree = "<group>"; };
+		4471B586803CBEA32E002D03 /* RCMessageContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCMessageContent.h; path = iOS_IMKit/Headers/RCMessageContent.h; sourceTree = "<group>"; };
+		473B8E72B6E93BDB1A4A17FC /* RCSuspendMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCSuspendMessage.h; path = iOS_IMKit/Headers/RCSuspendMessage.h; sourceTree = "<group>"; };
+		52245D6AF7A4FF597DDBB1CA /* RCProfileNotificationMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCProfileNotificationMessage.h; path = iOS_IMKit/Headers/RCProfileNotificationMessage.h; sourceTree = "<group>"; };
+		523FCE954979F7638AC68F73 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		5611EC6C11C3D11A6975BAAF /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		56B7292342614B95C4B6FE3B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		5BBEA1091A15D7B0B13071DC /* RCSelectPersonViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCSelectPersonViewController.h; path = iOS_IMKit/Headers/RCSelectPersonViewController.h; sourceTree = "<group>"; };
+		6169921F872B7863F86FF5DF /* interf_dec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = interf_dec.h; path = iOS_IMKit/Headers/interf_dec.h; sourceTree = "<group>"; };
+		6273F59C5E65A466A82B2AF4 /* RCVoiceMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCVoiceMessage.h; path = iOS_IMKit/Headers/RCVoiceMessage.h; sourceTree = "<group>"; };
+		63D29D4FF28EC61BA740B550 /* RCGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCGroup.h; path = iOS_IMKit/Headers/RCGroup.h; sourceTree = "<group>"; };
+		6E9EA9BFB5128586A3F9A862 /* Pods-RongCloudIMKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RongCloudIMKit-prefix.pch"; sourceTree = "<group>"; };
+		723CD883A6D1808A31F9D5F0 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		79652FBCD4FE347AAB526104 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		7C572FEB198BF403A57D5EAC /* AmrDataConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AmrDataConverter.h; path = iOS_IMKit/Headers/AmrDataConverter.h; sourceTree = "<group>"; };
+		7D35DD09BC909964B44546D2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		80BE933BEB5F5226F56E48C7 /* RCChatListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCChatListViewController.h; path = iOS_IMKit/Headers/RCChatListViewController.h; sourceTree = "<group>"; };
+		85D031D431201FD32FDC5E1A /* RCClientDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCClientDelegate.h; path = iOS_IMKit/Headers/RCClientDelegate.h; sourceTree = "<group>"; };
+		86B86F34F2A30D398001A14E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
+		897C47BBA85410F7C7417666 /* RCChatSettingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCChatSettingViewController.h; path = iOS_IMKit/Headers/RCChatSettingViewController.h; sourceTree = "<group>"; };
+		8D923CDAFE79D0FF96DF1CCA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		8E296E0C5B5208A025127BE2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		8FFEFD24418ED2CDF83E4B68 /* RCStatusDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCStatusDefine.h; path = iOS_IMKit/Headers/RCStatusDefine.h; sourceTree = "<group>"; };
+		90F51DBF4EFBECE437BF743E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		91233072DC380FC77C47B4A7 /* RCConversation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCConversation.h; path = iOS_IMKit/Headers/RCConversation.h; sourceTree = "<group>"; };
+		913B249CA1538E792815918F /* libPods-RongCloudIMKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RongCloudIMKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B9C2A1E29AC0D7BE1D8E5B /* RongCloud.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = RongCloud.bundle; path = iOS_IMKit/RongCloud.bundle; sourceTree = "<group>"; };
+		9A87280E46FBB6976A2F95DE /* RCStatusMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCStatusMessage.h; path = iOS_IMKit/Headers/RCStatusMessage.h; sourceTree = "<group>"; };
+		A004EC65A7D59030D1068D19 /* RCChatViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCChatViewController.h; path = iOS_IMKit/Headers/RCChatViewController.h; sourceTree = "<group>"; };
+		A1C682431D3C995948DF3684 /* RCLocationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCLocationViewController.h; path = iOS_IMKit/Headers/RCLocationViewController.h; sourceTree = "<group>"; };
+		A2EA2E8AACD2EF0C8D64A692 /* RCNotificationMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCNotificationMessage.h; path = iOS_IMKit/Headers/RCNotificationMessage.h; sourceTree = "<group>"; };
+		A565743EAAA01AE594985A7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A75AB30F3E3596EC4E18FAE2 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9C8CDA603751645BD38DE62 /* RCDiscussion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCDiscussion.h; path = iOS_IMKit/Headers/RCDiscussion.h; sourceTree = "<group>"; };
+		AA88C9AE1516329085058666 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		AE90226A6F5558D4BC6992F1 /* RCGroupListViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCGroupListViewController.h; path = iOS_IMKit/Headers/RCGroupListViewController.h; sourceTree = "<group>"; };
+		AFBAA66700C61EA1ED029207 /* interf_enc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = interf_enc.h; path = iOS_IMKit/Headers/interf_enc.h; sourceTree = "<group>"; };
+		B0350BE1F01E029A25B56322 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		B07972C1E98968C076D7F134 /* RCRichContentMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCRichContentMessage.h; path = iOS_IMKit/Headers/RCRichContentMessage.h; sourceTree = "<group>"; };
+		B99EC6CB4E891096FA22ED0A /* RCIMClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCIMClient.h; path = iOS_IMKit/Headers/RCIMClient.h; sourceTree = "<group>"; };
+		BBECD5EFE4D9DDD119D3DDE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BD52ECA41873E1B6DBC6CF99 /* RCUserInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCUserInfo.h; path = iOS_IMKit/Headers/RCUserInfo.h; sourceTree = "<group>"; };
+		BF149F128DCDDF684A4E165D /* Pods-RongCloudIMKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RongCloudIMKit-dummy.m"; sourceTree = "<group>"; };
+		C204CC4A81E24E6247CC5401 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		C7A2D3CB5E18B0C04B01E1D1 /* RCTextMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTextMessage.h; path = iOS_IMKit/Headers/RCTextMessage.h; sourceTree = "<group>"; };
+		CBF3EC792165FF81011D3529 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		D0C1203B68D49AFF274F1862 /* if_rom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = if_rom.h; path = iOS_IMKit/Headers/if_rom.h; sourceTree = "<group>"; };
+		D57974DD798E3BA4016FAF94 /* RCIM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCIM.h; path = iOS_IMKit/Headers/RCIM.h; sourceTree = "<group>"; };
+		D80B4761AF49BBCA0E1757F4 /* RCBasicViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCBasicViewController.h; path = iOS_IMKit/Headers/RCBasicViewController.h; sourceTree = "<group>"; };
+		DB10E065E9029A8F944E1566 /* RCCommandNotificationMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCCommandNotificationMessage.h; path = iOS_IMKit/Headers/RCCommandNotificationMessage.h; sourceTree = "<group>"; };
+		DB1E6CE119917CC5E121BCDA /* RCImageMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCImageMessage.h; path = iOS_IMKit/Headers/RCImageMessage.h; sourceTree = "<group>"; };
+		E36B9E67059DDC47C2143073 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		E456DC8E291CCDD89B149FBB /* RCThemeDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCThemeDefine.h; path = iOS_IMKit/Headers/RCThemeDefine.h; sourceTree = "<group>"; };
+		E539AB742ECD7A0568E0FB9A /* libiOS_IMKit.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libiOS_IMKit.a; path = iOS_IMKit/libiOS_IMKit.a; sourceTree = "<group>"; };
+		E652E2AE4BBC57302C045EDD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		EA077F88058D34E73CF102E5 /* RCHandShakeMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCHandShakeMessage.h; path = iOS_IMKit/Headers/RCHandShakeMessage.h; sourceTree = "<group>"; };
+		ED23BF68C27BA282A79F2F4E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		F34037EDF5EE7B1DB04F5214 /* dec_if.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dec_if.h; path = iOS_IMKit/Headers/dec_if.h; sourceTree = "<group>"; };
+		FE2E82F9A8437B3018AFA66F /* RCLocationMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCLocationMessage.h; path = iOS_IMKit/Headers/RCLocationMessage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		003E072E5134CA4C8A156666 /* Frameworks */ = {
+		634F3DC263EDC5C4BEBF536F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE1666CA4297E17C921917E /* Foundation.framework in Frameworks */,
+				CAE451FB88F32A69BC0D21B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A373130DE67939D0BAB0D200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0AB85299F2CE8E1459A0A3E /* AVFoundation.framework in Frameworks */,
+				2B04D12D168F14E269876BF8 /* AudioToolbox.framework in Frameworks */,
+				443EB98389442D4392F0E96E /* CFNetwork.framework in Frameworks */,
+				C0BE5BBE07AA320D1FE0629D /* CoreAudio.framework in Frameworks */,
+				99E326C2BA10C138B327E5CB /* CoreGraphics.framework in Frameworks */,
+				03B6FC189A34761E33685E18 /* CoreImage.framework in Frameworks */,
+				37C2B91A7543EAE3D846D278 /* CoreLocation.framework in Frameworks */,
+				CA51852A6B6F39CEDDE4CABE /* CoreMedia.framework in Frameworks */,
+				A50BDD3FD09237AD0C284C72 /* CoreTelephony.framework in Frameworks */,
+				DBB4460110D01C2625D7B8A6 /* CoreVideo.framework in Frameworks */,
+				30BA7E63522247256F6D3270 /* Foundation.framework in Frameworks */,
+				E4C8CD030692A7244A0728CF /* MapKit.framework in Frameworks */,
+				F8FCF7F7E4CF065F3F40D2E0 /* OpenGLES.framework in Frameworks */,
+				22DC4238F2009779A8CB590D /* QuartzCore.framework in Frameworks */,
+				DF7CD6B09676024671B49BF8 /* SystemConfiguration.framework in Frameworks */,
+				FAA12D15B9D90FC2155D6DE3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FFC527EA44BC22C6BE23333 /* iOS */ = {
+		07A4986813AE1ED5CAAB36FC /* RongCloudIMKit */ = {
 			isa = PBXGroup;
 			children = (
-				E5FD8A38863D810832DD514E /* Foundation.framework */,
+				7C572FEB198BF403A57D5EAC /* AmrDataConverter.h */,
+				D80B4761AF49BBCA0E1757F4 /* RCBasicViewController.h */,
+				80BE933BEB5F5226F56E48C7 /* RCChatListViewController.h */,
+				897C47BBA85410F7C7417666 /* RCChatSettingViewController.h */,
+				A004EC65A7D59030D1068D19 /* RCChatViewController.h */,
+				85D031D431201FD32FDC5E1A /* RCClientDelegate.h */,
+				DB10E065E9029A8F944E1566 /* RCCommandNotificationMessage.h */,
+				263331A30BC130B0C89DB826 /* RCContactNotificationMessage.h */,
+				91233072DC380FC77C47B4A7 /* RCConversation.h */,
+				A9C8CDA603751645BD38DE62 /* RCDiscussion.h */,
+				2BDE60BAA2DC0B5A83E8A114 /* RCDiscussionNotification.h */,
+				63D29D4FF28EC61BA740B550 /* RCGroup.h */,
+				AE90226A6F5558D4BC6992F1 /* RCGroupListViewController.h */,
+				EA077F88058D34E73CF102E5 /* RCHandShakeMessage.h */,
+				D57974DD798E3BA4016FAF94 /* RCIM.h */,
+				B99EC6CB4E891096FA22ED0A /* RCIMClient.h */,
+				1E702A8BAED77876577BBBCC /* RCIMClientHeader.h */,
+				DB1E6CE119917CC5E121BCDA /* RCImageMessage.h */,
+				FE2E82F9A8437B3018AFA66F /* RCLocationMessage.h */,
+				09A6EE4608F20A092DA38377 /* RCLocationPickerViewController.h */,
+				A1C682431D3C995948DF3684 /* RCLocationViewController.h */,
+				2F29606EECBD3977937E661C /* RCMessage.h */,
+				4471B586803CBEA32E002D03 /* RCMessageContent.h */,
+				A2EA2E8AACD2EF0C8D64A692 /* RCNotificationMessage.h */,
+				14BC6AA03CEE96FA8079DB5E /* RCPreviewViewController.h */,
+				52245D6AF7A4FF597DDBB1CA /* RCProfileNotificationMessage.h */,
+				28F41A09C8CC0AC10432B051 /* RCRenameViewController.h */,
+				B07972C1E98968C076D7F134 /* RCRichContentMessage.h */,
+				5BBEA1091A15D7B0B13071DC /* RCSelectPersonViewController.h */,
+				8FFEFD24418ED2CDF83E4B68 /* RCStatusDefine.h */,
+				9A87280E46FBB6976A2F95DE /* RCStatusMessage.h */,
+				473B8E72B6E93BDB1A4A17FC /* RCSuspendMessage.h */,
+				C7A2D3CB5E18B0C04B01E1D1 /* RCTextMessage.h */,
+				E456DC8E291CCDD89B149FBB /* RCThemeDefine.h */,
+				BD52ECA41873E1B6DBC6CF99 /* RCUserInfo.h */,
+				6273F59C5E65A466A82B2AF4 /* RCVoiceMessage.h */,
+				F34037EDF5EE7B1DB04F5214 /* dec_if.h */,
+				D0C1203B68D49AFF274F1862 /* if_rom.h */,
+				6169921F872B7863F86FF5DF /* interf_dec.h */,
+				AFBAA66700C61EA1ED029207 /* interf_enc.h */,
+				AF72F74E7CB675B13572DE3E /* Frameworks */,
+				782D2FA7455089CA7F43BD23 /* Resources */,
+				BD80BF0D2AC0BFADE7831912 /* Support Files */,
 			);
-			name = iOS;
+			path = RongCloudIMKit;
 			sourceTree = "<group>";
 		};
-		268A417FDE4C058148907AE5 /* Frameworks */ = {
+		26D229866B1B9BEE2CFF2753 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0FFC527EA44BC22C6BE23333 /* iOS */,
+				03DCDCB1B5F740453AE7D468 /* libPods.a */,
+				913B249CA1538E792815918F /* libPods-RongCloudIMKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EA3779E87B9941C220D219F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E4746B25DB243389EA77735 /* BmobSDK */,
+				07A4986813AE1ED5CAAB36FC /* RongCloudIMKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		502CE528FB31204C4511FA81 = {
+			isa = PBXGroup;
+			children = (
+				A75AB30F3E3596EC4E18FAE2 /* Podfile */,
+				D8EF9D2241413123F071A690 /* Frameworks */,
+				2EA3779E87B9941C220D219F /* Pods */,
+				26D229866B1B9BEE2CFF2753 /* Products */,
+				DF5D630B26DBCE760843FAE6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		6E4746B25DB243389EA77735 /* BmobSDK */ = {
+			isa = PBXGroup;
+			children = (
+				744A53D2DFB405A5CCCF0815 /* Frameworks */,
+			);
+			path = BmobSDK;
+			sourceTree = "<group>";
+		};
+		744A53D2DFB405A5CCCF0815 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5611EC6C11C3D11A6975BAAF /* BmobSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		48C51659004BBDD447AA37CD /* Pods */ = {
+		782D2FA7455089CA7F43BD23 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E717D465C8CD24BE57F619B4 /* Pods-acknowledgements.markdown */,
-				27B4B09604FCB702931FBE93 /* Pods-acknowledgements.plist */,
-				80AB10230D287358DB0794AF /* Pods-dummy.m */,
-				4EA217C8BF2B40583A86DE99 /* Pods-environment.h */,
-				C7704B04F3CB3D6163A7998F /* Pods-resources.sh */,
-				1C19B19A7E6E5458AE9EDDB5 /* Pods.debug.xcconfig */,
-				8801112E51E883B0DEDBC93C /* Pods.release.xcconfig */,
+				94B9C2A1E29AC0D7BE1D8E5B /* RongCloud.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		978DD7C9C9DDB138BC811A4D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				523FCE954979F7638AC68F73 /* AVFoundation.framework */,
+				8E296E0C5B5208A025127BE2 /* AudioToolbox.framework */,
+				56B7292342614B95C4B6FE3B /* CFNetwork.framework */,
+				86B86F34F2A30D398001A14E /* CoreAudio.framework */,
+				90F51DBF4EFBECE437BF743E /* CoreGraphics.framework */,
+				8D923CDAFE79D0FF96DF1CCA /* CoreImage.framework */,
+				79652FBCD4FE347AAB526104 /* CoreLocation.framework */,
+				7D35DD09BC909964B44546D2 /* CoreMedia.framework */,
+				E652E2AE4BBC57302C045EDD /* CoreTelephony.framework */,
+				2E4F0037DDFBD5703CCBC995 /* CoreVideo.framework */,
+				A565743EAAA01AE594985A7E /* Foundation.framework */,
+				2B39455F9B1D7047FABB665D /* MapKit.framework */,
+				C204CC4A81E24E6247CC5401 /* OpenGLES.framework */,
+				ED23BF68C27BA282A79F2F4E /* QuartzCore.framework */,
+				E36B9E67059DDC47C2143073 /* SystemConfiguration.framework */,
+				BBECD5EFE4D9DDD119D3DDE2 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		AF72F74E7CB675B13572DE3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E539AB742ECD7A0568E0FB9A /* libiOS_IMKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD80BF0D2AC0BFADE7831912 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				018B34059463E9B0CA80AF31 /* Pods-RongCloudIMKit.xcconfig */,
+				42367FBAB260E7C30AA116D5 /* Pods-RongCloudIMKit-Private.xcconfig */,
+				BF149F128DCDDF684A4E165D /* Pods-RongCloudIMKit-dummy.m */,
+				6E9EA9BFB5128586A3F9A862 /* Pods-RongCloudIMKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-RongCloudIMKit";
+			sourceTree = "<group>";
+		};
+		D8EF9D2241413123F071A690 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				978DD7C9C9DDB138BC811A4D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF17ADB3A5CDAD20968C31AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B05A2BA1CCA864BB26F7A6B /* Pods-acknowledgements.markdown */,
+				07D2D1E968231D6CBB7BF87D /* Pods-acknowledgements.plist */,
+				B0350BE1F01E029A25B56322 /* Pods-dummy.m */,
+				723CD883A6D1808A31F9D5F0 /* Pods-environment.h */,
+				AA88C9AE1516329085058666 /* Pods-resources.sh */,
+				CBF3EC792165FF81011D3529 /* Pods.debug.xcconfig */,
+				2430D3A47DAD134F7E979570 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		7D92AB1F7FBC201BF6D982ED /* Pods */ = {
+		DF5D630B26DBCE760843FAE6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B2D0DAC7141E18A86C83070 /* BmobSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8B2D0DAC7141E18A86C83070 /* BmobSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A9317F3965EF98D427454E26 /* Frameworks */,
-			);
-			path = BmobSDK;
-			sourceTree = "<group>";
-		};
-		9039CB68EFC543B35D8C5731 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				48C51659004BBDD447AA37CD /* Pods */,
+				DF17ADB3A5CDAD20968C31AB /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A9317F3965EF98D427454E26 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F0D1FD747714DA7BB58B1E10 /* BmobSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E2D1F4678DB9CCA45360993B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2F18E25094786DBCAD5081D2 /* libPods.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F2BD117A3470DDA966CBAE29 = {
-			isa = PBXGroup;
-			children = (
-				318A19211DC0623E1597CA45 /* Podfile */,
-				268A417FDE4C058148907AE5 /* Frameworks */,
-				7D92AB1F7FBC201BF6D982ED /* Pods */,
-				E2D1F4678DB9CCA45360993B /* Products */,
-				9039CB68EFC543B35D8C5731 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1C1AEA8F1754F93ED85BF3EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B9A7FBE6CD7DF2FA981604 /* AmrDataConverter.h in Headers */,
+				7B8BA632A182CCD09EADD436 /* RCBasicViewController.h in Headers */,
+				B5806994AB19CB3F37CCC5C7 /* RCChatListViewController.h in Headers */,
+				ADDA86273601BCB413B292E3 /* RCChatSettingViewController.h in Headers */,
+				052D5A77F9F8897010A4C0DE /* RCChatViewController.h in Headers */,
+				64B36ADA30556C593FFDE85F /* RCClientDelegate.h in Headers */,
+				AB04D54AEE6595DB2AE4492B /* RCCommandNotificationMessage.h in Headers */,
+				AA8A94DF53B55F8631EFF77B /* RCContactNotificationMessage.h in Headers */,
+				B8937E4C8C845175799985EE /* RCConversation.h in Headers */,
+				A460260924D88D87F77D708D /* RCDiscussion.h in Headers */,
+				B97E170B2F3E89E5C9CC15F2 /* RCDiscussionNotification.h in Headers */,
+				A67876025BCDB6D1C8FD4844 /* RCGroup.h in Headers */,
+				B2AF1F376783BC55904B671C /* RCGroupListViewController.h in Headers */,
+				1947CA977B3966C4628F2B7E /* RCHandShakeMessage.h in Headers */,
+				81C90B24C18BD968959C2968 /* RCIM.h in Headers */,
+				323FC11FB66880C02B7A540F /* RCIMClient.h in Headers */,
+				7CA1248582CBECCF86C6D8D7 /* RCIMClientHeader.h in Headers */,
+				55836E0626CCDED4E3D6F448 /* RCImageMessage.h in Headers */,
+				58A2457E27D683E4DB909EBC /* RCLocationMessage.h in Headers */,
+				EED4E79E9084EB0241C7CCA8 /* RCLocationPickerViewController.h in Headers */,
+				A860C3DD04DAC8E80C6DB32F /* RCLocationViewController.h in Headers */,
+				D0D8B2860832426D4C526014 /* RCMessage.h in Headers */,
+				321EAB89E3CC4D17961D222F /* RCMessageContent.h in Headers */,
+				E473422736D9F80E25A028EE /* RCNotificationMessage.h in Headers */,
+				025D46F7B436DE6B6CA3D3C4 /* RCPreviewViewController.h in Headers */,
+				CC1A1071CDE75CF93814CA9B /* RCProfileNotificationMessage.h in Headers */,
+				56470E56CACCD03F0CF3D913 /* RCRenameViewController.h in Headers */,
+				216FDD40A390D30CBECA0B27 /* RCRichContentMessage.h in Headers */,
+				BA34740B5E36587BD789AFFD /* RCSelectPersonViewController.h in Headers */,
+				F498169CEE71C6280DBCA4B1 /* RCStatusDefine.h in Headers */,
+				6F1B2C9F64C11CB6571E7859 /* RCStatusMessage.h in Headers */,
+				37351C152A453AD48241220B /* RCSuspendMessage.h in Headers */,
+				8FC6C56912B99EE6B4B99BF0 /* RCTextMessage.h in Headers */,
+				0FED337BA15A1433159395CD /* RCThemeDefine.h in Headers */,
+				460EBAF65DBD8657A82F3337 /* RCUserInfo.h in Headers */,
+				821BF362792D75248398CCCD /* RCVoiceMessage.h in Headers */,
+				5DAB0EFE264ED0C2C5A48FC7 /* dec_if.h in Headers */,
+				167994341128B09EC9A42624 /* if_rom.h in Headers */,
+				2E6A50E485762EF8DA06F926 /* interf_dec.h in Headers */,
+				2BA377FDE376367A88A35ABA /* interf_enc.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		94BF830766AFCA5459F64A5B /* Pods */ = {
+		167E68992F30C36A0A6F540A /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 195BF798B44F684F62BB8B8F /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 6932263AE59067C1BEF03DA9 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				0A96B0D3957CBBA42F70B79E /* Sources */,
-				003E072E5134CA4C8A156666 /* Frameworks */,
+				8CB6DEDA59407AC5FEBAD42E /* Sources */,
+				634F3DC263EDC5C4BEBF536F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AF40E08D7E45B32CBB3BC9A /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 03DCDCB1B5F740453AE7D468 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DCCAD3FBBC2856F35D18AE51 /* Pods-RongCloudIMKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F64A539133EA4D7FA9E6FA /* Build configuration list for PBXNativeTarget "Pods-RongCloudIMKit" */;
+			buildPhases = (
+				0054D6B2D755DD6957DC225D /* Sources */,
+				A373130DE67939D0BAB0D200 /* Frameworks */,
+				1C1AEA8F1754F93ED85BF3EE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = 2F18E25094786DBCAD5081D2 /* libPods.a */;
+			name = "Pods-RongCloudIMKit";
+			productName = "Pods-RongCloudIMKit";
+			productReference = 913B249CA1538E792815918F /* libPods-RongCloudIMKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D9DA375EF7D64A82EFE9C238 /* Project object */ = {
+		82ACE39E04FAC050F07A8C83 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 1E30E19DC82603D31BA9F11B /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 8FDD42897955DDC9E6A89CE0 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F2BD117A3470DDA966CBAE29;
-			productRefGroup = E2D1F4678DB9CCA45360993B /* Products */;
+			mainGroup = 502CE528FB31204C4511FA81;
+			productRefGroup = 26D229866B1B9BEE2CFF2753 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94BF830766AFCA5459F64A5B /* Pods */,
+				167E68992F30C36A0A6F540A /* Pods */,
+				DCCAD3FBBC2856F35D18AE51 /* Pods-RongCloudIMKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A96B0D3957CBBA42F70B79E /* Sources */ = {
+		0054D6B2D755DD6957DC225D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AF8CE9E2B3F92B19556A6B2 /* Pods-dummy.m in Sources */,
+				5A1E5224DC63D2B850C7531E /* Pods-RongCloudIMKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CB6DEDA59407AC5FEBAD42E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09CB431DE0437084BFBD36B /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7AF40E08D7E45B32CBB3BC9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RongCloudIMKit";
+			target = DCCAD3FBBC2856F35D18AE51 /* Pods-RongCloudIMKit */;
+			targetProxy = D0A844A31467867A4709E6BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		08207B0CC4FD3A47F4D8FA6A /* Debug */ = {
+		0C0C00189DD79BD0F1561A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42367FBAB260E7C30AA116D5 /* Pods-RongCloudIMKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RongCloudIMKit/Pods-RongCloudIMKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6829548C443FD8B250E3E68E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42367FBAB260E7C30AA116D5 /* Pods-RongCloudIMKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RongCloudIMKit/Pods-RongCloudIMKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		720C303F09B2D97D59297A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2430D3A47DAD134F7E979570 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B40B4BD266BCF0707B71FB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF3EC792165FF81011D3529 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D9D54AEFADAE1D8EDEF2B0F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,23 +611,7 @@
 			};
 			name = Debug;
 		};
-		2B951926C89EE0464C1694A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8801112E51E883B0DEDBC93C /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		53466D9CC2DCA38F4C44C4EF /* Release */ = {
+		F9D59EBCB6A15A31E1C46C70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,44 +645,37 @@
 			};
 			name = Release;
 		};
-		CEA2800122A6D73FA44CD32D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C19B19A7E6E5458AE9EDDB5 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		195BF798B44F684F62BB8B8F /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		6932263AE59067C1BEF03DA9 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEA2800122A6D73FA44CD32D /* Debug */,
-				2B951926C89EE0464C1694A0 /* Release */,
+				B40B4BD266BCF0707B71FB79 /* Debug */,
+				720C303F09B2D97D59297A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E30E19DC82603D31BA9F11B /* Build configuration list for PBXProject "Pods" */ = {
+		8FDD42897955DDC9E6A89CE0 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08207B0CC4FD3A47F4D8FA6A /* Debug */,
-				53466D9CC2DCA38F4C44C4EF /* Release */,
+				D9D54AEFADAE1D8EDEF2B0F9 /* Debug */,
+				F9D59EBCB6A15A31E1C46C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F64A539133EA4D7FA9E6FA /* Build configuration list for PBXNativeTarget "Pods-RongCloudIMKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0C00189DD79BD0F1561A17 /* Debug */,
+				6829548C443FD8B250E3E68E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D9DA375EF7D64A82EFE9C238 /* Project object */;
+	rootObject = 82ACE39E04FAC050F07A8C83 /* Project object */;
 }

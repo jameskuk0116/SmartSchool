@@ -1,10 +1,13 @@
 PODS:
   - BmobSDK (1.5.4)
+  - RongCloudIMKit (1.4.6)
 
 DEPENDENCIES:
   - BmobSDK
+  - RongCloudIMKit
 
 SPEC CHECKSUMS:
   BmobSDK: b16dc6328f1b9a9fee96312a401cdd712f4193b3
+  RongCloudIMKit: 9d0be1f368090457e014b45d862ed1c1c3a039f4
 
 COCOAPODS: 0.36.4

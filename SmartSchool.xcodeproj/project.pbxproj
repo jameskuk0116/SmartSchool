@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5D088F091ADE9454005F0876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F081ADE9454005F0876 /* main.m */; };
 		5D088F0C1ADE9454005F0876 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F0B1ADE9454005F0876 /* AppDelegate.mm */; };
-		5D088F121ADE9454005F0876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F101ADE9454005F0876 /* Main.storyboard */; };
 		5D088F141ADE9454005F0876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F131ADE9454005F0876 /* Images.xcassets */; };
 		5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F151ADE9454005F0876 /* LaunchScreen.xib */; };
 		5D088F231ADE9455005F0876 /* SmartSchoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F221ADE9455005F0876 /* SmartSchoolTests.m */; };
@@ -33,6 +32,7 @@
 		CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */; };
 		CDE113641AF9E1A20073BBB8 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE113631AF9E1A20073BBB8 /* BaiduMapAPI.framework */; };
 		CDE113661AF9E1F30073BBB8 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE113651AF9E1F30073BBB8 /* mapapi.bundle */; };
+		CDE1139A1AFA06EE0073BBB8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE113991AFA06EE0073BBB8 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		5D088F081ADE9454005F0876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D088F0A1ADE9454005F0876 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D088F0B1ADE9454005F0876 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		5D088F111ADE9454005F0876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D088F131ADE9454005F0876 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5D088F161ADE9454005F0876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5D088F1C1ADE9455005F0876 /* SmartSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +84,7 @@
 		CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsMainViewController.xib; sourceTree = "<group>"; };
 		CDE113631AF9E1A20073BBB8 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = SmartSchool/Frameworks/BaiduMapAPI.framework; sourceTree = "<group>"; };
 		CDE113651AF9E1F30073BBB8 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = SmartSchool/Frameworks/BaiduMapAPI.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		CDE113991AFA06EE0073BBB8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE1139A1AFA06EE0073BBB8 /* libxml2.dylib in Frameworks */,
 				CDE113641AF9E1A20073BBB8 /* BaiduMapAPI.framework in Frameworks */,
 				BABF7064EA10929A1FD146D9 /* libPods.a in Frameworks */,
 			);
@@ -133,7 +134,6 @@
 			children = (
 				5D088F0A1ADE9454005F0876 /* AppDelegate.h */,
 				5D088F0B1ADE9454005F0876 /* AppDelegate.mm */,
-				5D088F101ADE9454005F0876 /* Main.storyboard */,
 				5D088F131ADE9454005F0876 /* Images.xcassets */,
 				5D088F151ADE9454005F0876 /* LaunchScreen.xib */,
 				CDB8AACF1AF705E600A200C8 /* BaseClass */,
@@ -290,6 +290,7 @@
 		CDE113601AF9E1270073BBB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDE113991AFA06EE0073BBB8 /* libxml2.dylib */,
 				CDE113651AF9E1F30073BBB8 /* mapapi.bundle */,
 				CDE113631AF9E1A20073BBB8 /* BaiduMapAPI.framework */,
 			);
@@ -378,7 +379,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D088F121ADE9454005F0876 /* Main.storyboard in Resources */,
 				CDB8AAC71AF700DD00A200C8 /* icon_tabbar_user.png in Resources */,
 				CDB8AAC11AF700DD00A200C8 /* icon_tabbar_news.png in Resources */,
 				CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */,
@@ -473,14 +473,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5D088F101ADE9454005F0876 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D088F111ADE9454005F0876 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5D088F151ADE9454005F0876 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -586,7 +578,60 @@
 				INFOPLIST_FILE = SmartSchool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-RongCloudIMKit\"",
+					"-l\"c++\"",
+					"-l\"iOS_IMKit\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-l\"z.1.2.5\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"BmobSDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreAudio\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -602,7 +647,60 @@
 				INFOPLIST_FILE = SmartSchool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-RongCloudIMKit\"",
+					"-l\"c++\"",
+					"-l\"iOS_IMKit\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-l\"z.1.2.5\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"BmobSDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreAudio\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
