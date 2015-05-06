@@ -7,7 +7,15 @@
 //
 
 #import "BaseViewController.h"
+#import "RCChatListViewController.h"
+#import "RCConversation.h"
 
-@interface TalkMainViewController : BaseViewController
+
+@interface TalkMainViewController : RCChatListViewController
+
+/**
+ *  会话数据模型
+ */
+@property (strong,nonatomic) RCConversation *conversation;
 
 @end

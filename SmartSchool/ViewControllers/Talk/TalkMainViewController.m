@@ -7,6 +7,7 @@
 //
 
 #import "TalkMainViewController.h"
+#import "RCIM.h"
 
 @interface TalkMainViewController ()
 
@@ -18,6 +19,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setTitle:@"聊天"];
+    
+    self.navigationItem.hidesBackButton = YES;
+    
+    [RCIM connectWithToken:@"ZtaxrZfT994dL0u9V8l2gIviFRF+0gv+xIt4Zy8jC33yU0suoeqp8jR5Z2D1v7x5GZe5sr4/Wx74TrC5RmLOZaS4NtEZTpcu" completion:^(NSString *userId) {
+        // 此处处理连接成功。
+        NSLog(@"Login successfully with userId: %@.", userId);
+    } error:^(RCConnectErrorCode status) {
+        // 此处处理连接错误。
+        NSLog(@"Login failed.");
+    }];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"帮一下"
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(leftBarButtonItemPressed:)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,6 +41,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)leftBarButtonItemPressed:(UIButton *)sender{
+
+}
 /*
 #pragma mark - Navigation
 
