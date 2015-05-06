@@ -6,12 +6,6 @@
 // project.
 
 
-// AKTabBarController
-#define COCOAPODS_POD_AVAILABLE_AKTabBarController
-#define COCOAPODS_VERSION_MAJOR_AKTabBarController 1
-#define COCOAPODS_VERSION_MINOR_AKTabBarController 1
-#define COCOAPODS_VERSION_PATCH_AKTabBarController 0
-
 // BmobSDK
 #define COCOAPODS_POD_AVAILABLE_BmobSDK
 #define COCOAPODS_VERSION_MAJOR_BmobSDK 1

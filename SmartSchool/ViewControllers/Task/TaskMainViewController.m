@@ -34,18 +34,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (NSString *)tabImageName
-{
-    return @"icon_tabbar_task";
-}
 
-- (NSString *)activeTabImageName
-{
-    return @"icon_tabbar_task_selected";
-}
-
-- (NSString *)tabTitle
-{
-    return @"任务";
-}
 @end

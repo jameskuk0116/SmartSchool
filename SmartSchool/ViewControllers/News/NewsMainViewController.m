@@ -34,18 +34,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (NSString *)tabImageName
-{
-    return @"icon_tabbar_news";
-}
 
-- (NSString *)activeTabImageName
-{
-    return @"icon_tabbar_news_selected";
-}
-
-- (NSString *)tabTitle
-{
-    return @"首页";
-}
 @end

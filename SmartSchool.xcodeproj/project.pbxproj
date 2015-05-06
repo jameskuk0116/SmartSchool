@@ -24,15 +24,10 @@
 		CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */; };
 		CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F591AF7238D000B70A5 /* backgroud_lightgray.png */; };
 		CDB8AABF1AF700DD00A200C8 /* icon_tabbar_map.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB51AF700DD00A200C8 /* icon_tabbar_map.png */; };
-		CDB8AAC01AF700DD00A200C8 /* icon_tabbar_map_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB61AF700DD00A200C8 /* icon_tabbar_map_selected.png */; };
 		CDB8AAC11AF700DD00A200C8 /* icon_tabbar_news.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB71AF700DD00A200C8 /* icon_tabbar_news.png */; };
-		CDB8AAC21AF700DD00A200C8 /* icon_tabbar_news_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB81AF700DD00A200C8 /* icon_tabbar_news_selected.png */; };
 		CDB8AAC31AF700DD00A200C8 /* icon_tabbar_talkwith.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAB91AF700DD00A200C8 /* icon_tabbar_talkwith.png */; };
-		CDB8AAC41AF700DD00A200C8 /* icon_tabbar_talkwith_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABA1AF700DD00A200C8 /* icon_tabbar_talkwith_selected.png */; };
 		CDB8AAC51AF700DD00A200C8 /* icon_tabbar_task.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABB1AF700DD00A200C8 /* icon_tabbar_task.png */; };
-		CDB8AAC61AF700DD00A200C8 /* icon_tabbar_task_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABC1AF700DD00A200C8 /* icon_tabbar_task_selected.png */; };
 		CDB8AAC71AF700DD00A200C8 /* icon_tabbar_user.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABD1AF700DD00A200C8 /* icon_tabbar_user.png */; };
-		CDB8AAC81AF700DD00A200C8 /* icon_tabbar_user_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AABE1AF700DD00A200C8 /* icon_tabbar_user_selected.png */; };
 		CDB8AAD21AF7060800A200C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB8AAD11AF7060800A200C8 /* BaseViewController.m */; };
 		CDB8AAD61AF7064A00A200C8 /* NewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB8AAD41AF7064A00A200C8 /* NewsMainViewController.m */; };
 		CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */; };
@@ -77,15 +72,10 @@
 		CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMainViewController.xib; sourceTree = "<group>"; };
 		CD8D7F591AF7238D000B70A5 /* backgroud_lightgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroud_lightgray.png; sourceTree = "<group>"; };
 		CDB8AAB51AF700DD00A200C8 /* icon_tabbar_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_map.png; sourceTree = "<group>"; };
-		CDB8AAB61AF700DD00A200C8 /* icon_tabbar_map_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_map_selected.png; sourceTree = "<group>"; };
 		CDB8AAB71AF700DD00A200C8 /* icon_tabbar_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_news.png; sourceTree = "<group>"; };
-		CDB8AAB81AF700DD00A200C8 /* icon_tabbar_news_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_news_selected.png; sourceTree = "<group>"; };
 		CDB8AAB91AF700DD00A200C8 /* icon_tabbar_talkwith.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_talkwith.png; sourceTree = "<group>"; };
-		CDB8AABA1AF700DD00A200C8 /* icon_tabbar_talkwith_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_talkwith_selected.png; sourceTree = "<group>"; };
 		CDB8AABB1AF700DD00A200C8 /* icon_tabbar_task.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_task.png; sourceTree = "<group>"; };
-		CDB8AABC1AF700DD00A200C8 /* icon_tabbar_task_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_task_selected.png; sourceTree = "<group>"; };
 		CDB8AABD1AF700DD00A200C8 /* icon_tabbar_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_user.png; sourceTree = "<group>"; };
-		CDB8AABE1AF700DD00A200C8 /* icon_tabbar_user_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tabbar_user_selected.png; sourceTree = "<group>"; };
 		CDB8AAD01AF7060800A200C8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		CDB8AAD11AF7060800A200C8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		CDB8AAD31AF7064A00A200C8 /* NewsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainViewController.h; sourceTree = "<group>"; };
@@ -212,15 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				CDB8AAB51AF700DD00A200C8 /* icon_tabbar_map.png */,
-				CDB8AAB61AF700DD00A200C8 /* icon_tabbar_map_selected.png */,
 				CDB8AAB71AF700DD00A200C8 /* icon_tabbar_news.png */,
-				CDB8AAB81AF700DD00A200C8 /* icon_tabbar_news_selected.png */,
 				CDB8AAB91AF700DD00A200C8 /* icon_tabbar_talkwith.png */,
-				CDB8AABA1AF700DD00A200C8 /* icon_tabbar_talkwith_selected.png */,
 				CDB8AABB1AF700DD00A200C8 /* icon_tabbar_task.png */,
-				CDB8AABC1AF700DD00A200C8 /* icon_tabbar_task_selected.png */,
 				CDB8AABD1AF700DD00A200C8 /* icon_tabbar_user.png */,
-				CDB8AABE1AF700DD00A200C8 /* icon_tabbar_user_selected.png */,
 			);
 			path = icon_tabbar;
 			sourceTree = "<group>";
@@ -380,23 +365,18 @@
 			files = (
 				5D088F121ADE9454005F0876 /* Main.storyboard in Resources */,
 				CDB8AAC71AF700DD00A200C8 /* icon_tabbar_user.png in Resources */,
-				CDB8AAC41AF700DD00A200C8 /* icon_tabbar_talkwith_selected.png in Resources */,
 				CDB8AAC11AF700DD00A200C8 /* icon_tabbar_news.png in Resources */,
 				CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */,
 				5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */,
-				CDB8AAC01AF700DD00A200C8 /* icon_tabbar_map_selected.png in Resources */,
 				5D088F141ADE9454005F0876 /* Images.xcassets in Resources */,
 				CDB8AABF1AF700DD00A200C8 /* icon_tabbar_map.png in Resources */,
 				CDB8AAC31AF700DD00A200C8 /* icon_tabbar_talkwith.png in Resources */,
-				CDB8AAC81AF700DD00A200C8 /* icon_tabbar_user_selected.png in Resources */,
-				CDB8AAC21AF700DD00A200C8 /* icon_tabbar_news_selected.png in Resources */,
 				CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */,
 				CD8D7F4B1AF7076B000B70A5 /* TalkMainViewController.xib in Resources */,
 				CDB8AAC51AF700DD00A200C8 /* icon_tabbar_task.png in Resources */,
 				CD8D7F501AF70787000B70A5 /* TaskMainViewController.xib in Resources */,
 				CD8D7F461AF70756000B70A5 /* MapsMainViewController.xib in Resources */,
 				CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */,
-				CDB8AAC61AF700DD00A200C8 /* icon_tabbar_task_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

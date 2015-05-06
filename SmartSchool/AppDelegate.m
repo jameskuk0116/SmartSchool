@@ -24,24 +24,31 @@
     // Override point for customization after application launch.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.backgroundColor = [UIColor whiteColor];
+    _tabBarController = [[UITabBarController alloc]init];
     NewsMainViewController *newsView = [[NewsMainViewController alloc]init];
     TaskMainViewController *taskView = [[TaskMainViewController alloc] init];
     MapsMainViewController *mapsView = [[MapsMainViewController alloc] init];
     TalkMainViewController *talksView = [[TalkMainViewController alloc] init];
     MineMainViewController *mineView = [[MineMainViewController alloc] init];
     
-    _newsNavViewController = [[UINavigationController alloc] initWithRootViewController:newsView];
-    _newsNavViewController.tabBarItem.title = @"微信";
-    _newsNavViewController.tabBarItem.image = [UIImage imageNamed:@"icon_tabbar_news"];
-    _newsNavViewController.tabBarItem.badgeValue = @"3";
+    UITabBarItem *newsItem=[[UITabBarItem alloc]initWithTitle:@"新闻" image:[UIImage imageNamed:@"icon_tabbar_news"] tag:1];
+    UITabBarItem *taskItem=[[UITabBarItem alloc]initWithTitle:@"任务" image:[UIImage imageNamed:@"icon_tabbar_task"] tag:2];
+    UITabBarItem *mapItem=[[UITabBarItem alloc]initWithTitle:@"地图" image:[UIImage imageNamed:@"icon_tabbar_map"] tag:3];
+    UITabBarItem *talkItem=[[UITabBarItem alloc]initWithTitle:@"聊天" image:[UIImage imageNamed:@"icon_tabbar_talkwith"] tag:4];
+    UITabBarItem *mineItem=[[UITabBarItem alloc]initWithTitle:@"我的" image:[UIImage imageNamed:@"icon_tabbar_user"] tag:5];
     
+    _newsNavViewController = [[UINavigationController alloc] initWithRootViewController:newsView];
+    _newsNavViewController.tabBarItem = newsItem;
     _taskNavViewController = [[UINavigationController alloc] initWithRootViewController:taskView];
+    _taskNavViewController.tabBarItem = taskItem;
     _mapsNavViewController = [[UINavigationController alloc] initWithRootViewController:mapsView];
+    _mapsNavViewController.tabBarItem = mapItem;
     _talkNavViewController = [[UINavigationController alloc] initWithRootViewController:talksView];
+    _talkNavViewController.tabBarItem = talkItem;
     _mineNavViewController = [[UINavigationController alloc] initWithRootViewController:mineView];
+    _mineNavViewController.tabBarItem = mineItem;
     
     if ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7) {
-        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:0.0]];
         //设置状态栏
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
         _newsNavViewController.navigationBar.translucent = NO;
@@ -66,27 +73,10 @@
     _window.userInteractionEnabled = YES;
     [_window setRootViewController:_tabBarController];
     [_window makeKeyAndVisible];
-#pragma mark - 设置TabBarController
-    
-    // 创建TabBarController
-    UITabBarController * tabBarController = [[UITabBarController alloc]init];
-    
-    //CGRect frame = CGRectMake(0, 20, 320, 44);
-    //tabBarController.tabBar.frame = frame;
-    
-    // 设置着色
-    _tabBarController.tabBar.tintColor = [UIColor greenColor];
+
     // 设置选中图片时候
-    _tabBarController.tabBar.selectedImageTintColor = [UIColor brownColor];
-    // 设置背景图片(自己没有图片,不进行设置)
-    
-    
-    tabBarController.selectedIndex = 3;
-    
-    
-    self.window.rootViewController = tabBarController;
-    
-    [self.window makeKeyAndVisible];
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:0.389 green:1.000 blue:0.000 alpha:1.000];
+
     return YES;
 }
 

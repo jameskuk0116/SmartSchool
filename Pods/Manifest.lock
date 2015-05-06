@@ -1,13 +1,10 @@
 PODS:
-  - AKTabBarController (1.1.0)
   - BmobSDK (1.5.4)
 
 DEPENDENCIES:
-  - AKTabBarController
   - BmobSDK
 
 SPEC CHECKSUMS:
-  AKTabBarController: 6a250b798852e58a663a3bc438b400fedb82c20f
   BmobSDK: b16dc6328f1b9a9fee96312a401cdd712f4193b3
 
 COCOAPODS: 0.36.4

@@ -7,378 +7,175 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		060BAC3DDF784ECD370105B5 /* UINavigationController+AKTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0448B8C89F78AF388F187021 /* UINavigationController+AKTabBarController.h */; };
-		0E92B94E603A0A8C2B41BCCA /* AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811AA48677C3371AA0CC3D1E /* AKTabBarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		25DC544ABC5B926BB041B0BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711E65903A70A8D6760E57E9 /* Foundation.framework */; };
-		2EB234985822FBD2D69E213E /* AKTab.h in Headers */ = {isa = PBXBuildFile; fileRef = 34919511568146D6FF4791CC /* AKTab.h */; };
-		570D30C58B3B67FF44BC86E5 /* AKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B9DCBF73076701FB70B2DA /* AKTabBar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		604C9BD0C166D02C3A980CA0 /* UIViewController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18454AACB654127D5C43FCA6 /* UIViewController+AKTabBarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		662619BCF4F6EA21225DC966 /* UIViewController+AKTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB2AA1EE1DDDE49313D35A1 /* UIViewController+AKTabBarController.h */; };
-		70D5F372B45088E2AB510D69 /* AKTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 71549F4D20B21C348B50A654 /* AKTabBarController.h */; };
-		83F08591C3BBC0AAEE916B15 /* Pods-AKTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3BF53353006C6975282BA8 /* Pods-AKTabBarController-dummy.m */; };
-		88D19797AF86ED5E8D133764 /* AKTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D205AA276BAD77DFEDA7773 /* AKTabBar.h */; };
-		8E43B886A5820D88292B2790 /* AKTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4627026335B6B2557CD8260F /* AKTabBarView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9732C762032F5343134BB034 /* AKTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0872A4AF9672A45FDB4D57 /* AKTab.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		991823C617D1AA01E4496199 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAFA1C556DEC9843C486AC2 /* QuartzCore.framework */; };
-		BA9DBC792C52EEACEA34DE23 /* AKTabBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DDA2CDE1876B1C555819B56 /* AKTabBarView.h */; };
-		BBA4645AABF670026752D64B /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC55D2F03161A4D12147D1BA /* Pods-dummy.m */; };
-		C814B822A6D20C30DE50EF69 /* UINavigationController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4310863BEEEB99FB9D8D4111 /* UINavigationController+AKTabBarController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E46B15B6C7501980E53D6F58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711E65903A70A8D6760E57E9 /* Foundation.framework */; };
+		4AF8CE9E2B3F92B19556A6B2 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80AB10230D287358DB0794AF /* Pods-dummy.m */; };
+		BAE1666CA4297E17C921917E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FD8A38863D810832DD514E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7D29BBC08F909659F2DDF0EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 67316462A68378522A08C041 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D3BBEA6CB9F68EA00EECA0AA;
-			remoteInfo = "Pods-AKTabBarController";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0448B8C89F78AF388F187021 /* UINavigationController+AKTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+AKTabBarController.h"; path = "AKTabBarController/UINavigationController+AKTabBarController.h"; sourceTree = "<group>"; };
-		06FBCF0D55220C9ED099A377 /* Pods-AKTabBarController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AKTabBarController-Private.xcconfig"; sourceTree = "<group>"; };
-		074BC7B201514D2D0DD54795 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		0AC25D136FBE2E379B8A1026 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0C3BF53353006C6975282BA8 /* Pods-AKTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AKTabBarController-dummy.m"; sourceTree = "<group>"; };
-		138E1CB78652DFEACA4F4679 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		18454AACB654127D5C43FCA6 /* UIViewController+AKTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+AKTabBarController.m"; path = "AKTabBarController/UIViewController+AKTabBarController.m"; sourceTree = "<group>"; };
-		1A0F6E839EE845B6128F6F46 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		2D4E420F6CEFB18E9D85FF82 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		2F52E810B5DFD58E6534C7E1 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		34919511568146D6FF4791CC /* AKTab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTab.h; path = AKTabBarController/AKTab.h; sourceTree = "<group>"; };
-		4310863BEEEB99FB9D8D4111 /* UINavigationController+AKTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+AKTabBarController.m"; path = "AKTabBarController/UINavigationController+AKTabBarController.m"; sourceTree = "<group>"; };
-		4627026335B6B2557CD8260F /* AKTabBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKTabBarView.m; path = AKTabBarController/AKTabBarView.m; sourceTree = "<group>"; };
-		4DDA2CDE1876B1C555819B56 /* AKTabBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTabBarView.h; path = AKTabBarController/AKTabBarView.h; sourceTree = "<group>"; };
-		54EF32AD4B135129DA418ACD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6B0872A4AF9672A45FDB4D57 /* AKTab.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKTab.m; path = AKTabBarController/AKTab.m; sourceTree = "<group>"; };
-		711E65903A70A8D6760E57E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		71549F4D20B21C348B50A654 /* AKTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTabBarController.h; path = AKTabBarController/AKTabBarController.h; sourceTree = "<group>"; };
-		7D205AA276BAD77DFEDA7773 /* AKTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKTabBar.h; path = AKTabBarController/AKTabBar.h; sourceTree = "<group>"; };
-		811AA48677C3371AA0CC3D1E /* AKTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKTabBarController.m; path = AKTabBarController/AKTabBarController.m; sourceTree = "<group>"; };
-		8EAFA1C556DEC9843C486AC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		ADFA2E87F99CE6A35933FFE0 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
-		B5BF407F677D10E4BD142D58 /* libPods-AKTabBarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AKTabBarController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7B9DCBF73076701FB70B2DA /* AKTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKTabBar.m; path = AKTabBarController/AKTabBar.m; sourceTree = "<group>"; };
-		C4BD575F50F8DF8A048A7B99 /* Pods-AKTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AKTabBarController-prefix.pch"; sourceTree = "<group>"; };
-		CF74A18049058FE2E7B66A53 /* Pods-AKTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AKTabBarController.xcconfig"; sourceTree = "<group>"; };
-		D1D155F40B5C2E2CB6748CF9 /* AKTabBarController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AKTabBarController.bundle; path = AKTabBarController/AKTabBarController.bundle; sourceTree = "<group>"; };
-		DAB2AA1EE1DDDE49313D35A1 /* UIViewController+AKTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+AKTabBarController.h"; path = "AKTabBarController/UIViewController+AKTabBarController.h"; sourceTree = "<group>"; };
-		EC55D2F03161A4D12147D1BA /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		F9128075028E64DD53ECB528 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		1C19B19A7E6E5458AE9EDDB5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		27B4B09604FCB702931FBE93 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		2F18E25094786DBCAD5081D2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		318A19211DC0623E1597CA45 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4EA217C8BF2B40583A86DE99 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		80AB10230D287358DB0794AF /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		8801112E51E883B0DEDBC93C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		C7704B04F3CB3D6163A7998F /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		E5FD8A38863D810832DD514E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E717D465C8CD24BE57F619B4 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F0D1FD747714DA7BB58B1E10 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		563E8D4B52A332664F60109F /* Frameworks */ = {
+		003E072E5134CA4C8A156666 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25DC544ABC5B926BB041B0BA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE44162CA4357C757E33469B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E46B15B6C7501980E53D6F58 /* Foundation.framework in Frameworks */,
-				991823C617D1AA01E4496199 /* QuartzCore.framework in Frameworks */,
+				BAE1666CA4297E17C921917E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15BCFC974ED6C4A52B39D2B6 /* Targets Support Files */ = {
+		0FFC527EA44BC22C6BE23333 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B5075E7CDAAA1F77401E2CD6 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		1D16C2C0BBB11D56288CDBE1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				862E47DE80C77812BEE5B3FC /* AKTabBarController */,
-				CA6314F1FCBEEE0AAEC2757C /* BmobSDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		59D8B086EA26BE4EA8ABE23D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ADFA2E87F99CE6A35933FFE0 /* BmobSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		862E47DE80C77812BEE5B3FC /* AKTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				34919511568146D6FF4791CC /* AKTab.h */,
-				6B0872A4AF9672A45FDB4D57 /* AKTab.m */,
-				7D205AA276BAD77DFEDA7773 /* AKTabBar.h */,
-				B7B9DCBF73076701FB70B2DA /* AKTabBar.m */,
-				71549F4D20B21C348B50A654 /* AKTabBarController.h */,
-				811AA48677C3371AA0CC3D1E /* AKTabBarController.m */,
-				4DDA2CDE1876B1C555819B56 /* AKTabBarView.h */,
-				4627026335B6B2557CD8260F /* AKTabBarView.m */,
-				0448B8C89F78AF388F187021 /* UINavigationController+AKTabBarController.h */,
-				4310863BEEEB99FB9D8D4111 /* UINavigationController+AKTabBarController.m */,
-				DAB2AA1EE1DDDE49313D35A1 /* UIViewController+AKTabBarController.h */,
-				18454AACB654127D5C43FCA6 /* UIViewController+AKTabBarController.m */,
-				8AB11AA4BFAC5BFB4826E06C /* Resources */,
-				B61492F6AADD2224C8B36778 /* Support Files */,
-			);
-			path = AKTabBarController;
-			sourceTree = "<group>";
-		};
-		89B260E2B318F146F5F9CB05 = {
-			isa = PBXGroup;
-			children = (
-				54EF32AD4B135129DA418ACD /* Podfile */,
-				D8997AD2D4120D7F928A1E06 /* Frameworks */,
-				1D16C2C0BBB11D56288CDBE1 /* Pods */,
-				FD389EBBF8C9652E76A19A7D /* Products */,
-				15BCFC974ED6C4A52B39D2B6 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		8AB11AA4BFAC5BFB4826E06C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D1D155F40B5C2E2CB6748CF9 /* AKTabBarController.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		92653AFBA6497056551E2647 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				711E65903A70A8D6760E57E9 /* Foundation.framework */,
-				8EAFA1C556DEC9843C486AC2 /* QuartzCore.framework */,
+				E5FD8A38863D810832DD514E /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		B5075E7CDAAA1F77401E2CD6 /* Pods */ = {
+		268A417FDE4C058148907AE5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0AC25D136FBE2E379B8A1026 /* Pods-acknowledgements.markdown */,
-				074BC7B201514D2D0DD54795 /* Pods-acknowledgements.plist */,
-				EC55D2F03161A4D12147D1BA /* Pods-dummy.m */,
-				2D4E420F6CEFB18E9D85FF82 /* Pods-environment.h */,
-				2F52E810B5DFD58E6534C7E1 /* Pods-resources.sh */,
-				F9128075028E64DD53ECB528 /* Pods.debug.xcconfig */,
-				1A0F6E839EE845B6128F6F46 /* Pods.release.xcconfig */,
+				0FFC527EA44BC22C6BE23333 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48C51659004BBDD447AA37CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E717D465C8CD24BE57F619B4 /* Pods-acknowledgements.markdown */,
+				27B4B09604FCB702931FBE93 /* Pods-acknowledgements.plist */,
+				80AB10230D287358DB0794AF /* Pods-dummy.m */,
+				4EA217C8BF2B40583A86DE99 /* Pods-environment.h */,
+				C7704B04F3CB3D6163A7998F /* Pods-resources.sh */,
+				1C19B19A7E6E5458AE9EDDB5 /* Pods.debug.xcconfig */,
+				8801112E51E883B0DEDBC93C /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		B61492F6AADD2224C8B36778 /* Support Files */ = {
+		7D92AB1F7FBC201BF6D982ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CF74A18049058FE2E7B66A53 /* Pods-AKTabBarController.xcconfig */,
-				06FBCF0D55220C9ED099A377 /* Pods-AKTabBarController-Private.xcconfig */,
-				0C3BF53353006C6975282BA8 /* Pods-AKTabBarController-dummy.m */,
-				C4BD575F50F8DF8A048A7B99 /* Pods-AKTabBarController-prefix.pch */,
+				8B2D0DAC7141E18A86C83070 /* BmobSDK */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-AKTabBarController";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		CA6314F1FCBEEE0AAEC2757C /* BmobSDK */ = {
+		8B2D0DAC7141E18A86C83070 /* BmobSDK */ = {
 			isa = PBXGroup;
 			children = (
-				59D8B086EA26BE4EA8ABE23D /* Frameworks */,
+				A9317F3965EF98D427454E26 /* Frameworks */,
 			);
 			path = BmobSDK;
 			sourceTree = "<group>";
 		};
-		D8997AD2D4120D7F928A1E06 /* Frameworks */ = {
+		9039CB68EFC543B35D8C5731 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				92653AFBA6497056551E2647 /* iOS */,
+				48C51659004BBDD447AA37CD /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A9317F3965EF98D427454E26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0D1FD747714DA7BB58B1E10 /* BmobSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FD389EBBF8C9652E76A19A7D /* Products */ = {
+		E2D1F4678DB9CCA45360993B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				138E1CB78652DFEACA4F4679 /* libPods.a */,
-				B5BF407F677D10E4BD142D58 /* libPods-AKTabBarController.a */,
+				2F18E25094786DBCAD5081D2 /* libPods.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F2BD117A3470DDA966CBAE29 = {
+			isa = PBXGroup;
+			children = (
+				318A19211DC0623E1597CA45 /* Podfile */,
+				268A417FDE4C058148907AE5 /* Frameworks */,
+				7D92AB1F7FBC201BF6D982ED /* Pods */,
+				E2D1F4678DB9CCA45360993B /* Products */,
+				9039CB68EFC543B35D8C5731 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		7AE4756EC22D2F1B5C6CAA66 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2EB234985822FBD2D69E213E /* AKTab.h in Headers */,
-				88D19797AF86ED5E8D133764 /* AKTabBar.h in Headers */,
-				70D5F372B45088E2AB510D69 /* AKTabBarController.h in Headers */,
-				BA9DBC792C52EEACEA34DE23 /* AKTabBarView.h in Headers */,
-				060BAC3DDF784ECD370105B5 /* UINavigationController+AKTabBarController.h in Headers */,
-				662619BCF4F6EA21225DC966 /* UIViewController+AKTabBarController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		3AC99CEFF6941855212D174A /* Pods */ = {
+		94BF830766AFCA5459F64A5B /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC8CE2620BACE89B872BD2C9 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 195BF798B44F684F62BB8B8F /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				A107C53CB4B670446EA1869F /* Sources */,
-				563E8D4B52A332664F60109F /* Frameworks */,
+				0A96B0D3957CBBA42F70B79E /* Sources */,
+				003E072E5134CA4C8A156666 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F6A56E84FCE7C09268958E68 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 138E1CB78652DFEACA4F4679 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D3BBEA6CB9F68EA00EECA0AA /* Pods-AKTabBarController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0973719E372EFB5173F91A59 /* Build configuration list for PBXNativeTarget "Pods-AKTabBarController" */;
-			buildPhases = (
-				6EF69FE0566F1F49CAE15002 /* Sources */,
-				AE44162CA4357C757E33469B /* Frameworks */,
-				7AE4756EC22D2F1B5C6CAA66 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-AKTabBarController";
-			productName = "Pods-AKTabBarController";
-			productReference = B5BF407F677D10E4BD142D58 /* libPods-AKTabBarController.a */;
+			productReference = 2F18E25094786DBCAD5081D2 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		67316462A68378522A08C041 /* Project object */ = {
+		D9DA375EF7D64A82EFE9C238 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 59F7E518D4F5A01745B5B47F /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 1E30E19DC82603D31BA9F11B /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 89B260E2B318F146F5F9CB05;
-			productRefGroup = FD389EBBF8C9652E76A19A7D /* Products */;
+			mainGroup = F2BD117A3470DDA966CBAE29;
+			productRefGroup = E2D1F4678DB9CCA45360993B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3AC99CEFF6941855212D174A /* Pods */,
-				D3BBEA6CB9F68EA00EECA0AA /* Pods-AKTabBarController */,
+				94BF830766AFCA5459F64A5B /* Pods */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6EF69FE0566F1F49CAE15002 /* Sources */ = {
+		0A96B0D3957CBBA42F70B79E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9732C762032F5343134BB034 /* AKTab.m in Sources */,
-				570D30C58B3B67FF44BC86E5 /* AKTabBar.m in Sources */,
-				0E92B94E603A0A8C2B41BCCA /* AKTabBarController.m in Sources */,
-				8E43B886A5820D88292B2790 /* AKTabBarView.m in Sources */,
-				83F08591C3BBC0AAEE916B15 /* Pods-AKTabBarController-dummy.m in Sources */,
-				C814B822A6D20C30DE50EF69 /* UINavigationController+AKTabBarController.m in Sources */,
-				604C9BD0C166D02C3A980CA0 /* UIViewController+AKTabBarController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A107C53CB4B670446EA1869F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BBA4645AABF670026752D64B /* Pods-dummy.m in Sources */,
+				4AF8CE9E2B3F92B19556A6B2 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F6A56E84FCE7C09268958E68 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AKTabBarController";
-			target = D3BBEA6CB9F68EA00EECA0AA /* Pods-AKTabBarController */;
-			targetProxy = 7D29BBC08F909659F2DDF0EC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		37CD20FE618986527E519704 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06FBCF0D55220C9ED099A377 /* Pods-AKTabBarController-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AKTabBarController/Pods-AKTabBarController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A3CDB073B96C310132A20254 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0F6E839EE845B6128F6F46 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		B48AC4CEA1B2A43CBE409F28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06FBCF0D55220C9ED099A377 /* Pods-AKTabBarController-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AKTabBarController/Pods-AKTabBarController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		C588E46A66FE7236F414FAD2 /* Debug */ = {
+		08207B0CC4FD3A47F4D8FA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -417,7 +214,23 @@
 			};
 			name = Debug;
 		};
-		CFB7C5789DEAA4A436A6AD50 /* Release */ = {
+		2B951926C89EE0464C1694A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8801112E51E883B0DEDBC93C /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		53466D9CC2DCA38F4C44C4EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -451,9 +264,9 @@
 			};
 			name = Release;
 		};
-		FE989443DA4E6433FCD9AAFF /* Debug */ = {
+		CEA2800122A6D73FA44CD32D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9128075028E64DD53ECB528 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1C19B19A7E6E5458AE9EDDB5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -470,34 +283,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0973719E372EFB5173F91A59 /* Build configuration list for PBXNativeTarget "Pods-AKTabBarController" */ = {
+		195BF798B44F684F62BB8B8F /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37CD20FE618986527E519704 /* Debug */,
-				B48AC4CEA1B2A43CBE409F28 /* Release */,
+				CEA2800122A6D73FA44CD32D /* Debug */,
+				2B951926C89EE0464C1694A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59F7E518D4F5A01745B5B47F /* Build configuration list for PBXProject "Pods" */ = {
+		1E30E19DC82603D31BA9F11B /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C588E46A66FE7236F414FAD2 /* Debug */,
-				CFB7C5789DEAA4A436A6AD50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CC8CE2620BACE89B872BD2C9 /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FE989443DA4E6433FCD9AAFF /* Debug */,
-				A3CDB073B96C310132A20254 /* Release */,
+				08207B0CC4FD3A47F4D8FA6A /* Debug */,
+				53466D9CC2DCA38F4C44C4EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 67316462A68378522A08C041 /* Project object */;
+	rootObject = D9DA375EF7D64A82EFE9C238 /* Project object */;
 }
