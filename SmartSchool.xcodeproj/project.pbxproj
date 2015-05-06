@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D088F091ADE9454005F0876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F081ADE9454005F0876 /* main.m */; };
-		5D088F0C1ADE9454005F0876 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F0B1ADE9454005F0876 /* AppDelegate.m */; };
+		5D088F0C1ADE9454005F0876 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F0B1ADE9454005F0876 /* AppDelegate.mm */; };
 		5D088F121ADE9454005F0876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F101ADE9454005F0876 /* Main.storyboard */; };
 		5D088F141ADE9454005F0876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F131ADE9454005F0876 /* Images.xcassets */; };
 		5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F151ADE9454005F0876 /* LaunchScreen.xib */; };
@@ -31,6 +31,8 @@
 		CDB8AAD21AF7060800A200C8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB8AAD11AF7060800A200C8 /* BaseViewController.m */; };
 		CDB8AAD61AF7064A00A200C8 /* NewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB8AAD41AF7064A00A200C8 /* NewsMainViewController.m */; };
 		CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */; };
+		CDE113641AF9E1A20073BBB8 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE113631AF9E1A20073BBB8 /* BaiduMapAPI.framework */; };
+		CDE113661AF9E1F30073BBB8 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE113651AF9E1F30073BBB8 /* mapapi.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,7 @@
 		5D088F071ADE9454005F0876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D088F081ADE9454005F0876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D088F0A1ADE9454005F0876 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5D088F0B1ADE9454005F0876 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5D088F0B1ADE9454005F0876 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		5D088F111ADE9454005F0876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D088F131ADE9454005F0876 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5D088F161ADE9454005F0876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		CDB8AAD31AF7064A00A200C8 /* NewsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainViewController.h; sourceTree = "<group>"; };
 		CDB8AAD41AF7064A00A200C8 /* NewsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainViewController.m; sourceTree = "<group>"; };
 		CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsMainViewController.xib; sourceTree = "<group>"; };
+		CDE113631AF9E1A20073BBB8 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI.framework; path = SmartSchool/Frameworks/BaiduMapAPI.framework; sourceTree = "<group>"; };
+		CDE113651AF9E1F30073BBB8 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = SmartSchool/Frameworks/BaiduMapAPI.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE113641AF9E1A20073BBB8 /* BaiduMapAPI.framework in Frameworks */,
 				BABF7064EA10929A1FD146D9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +110,7 @@
 		5D088EFA1ADE9454005F0876 = {
 			isa = PBXGroup;
 			children = (
+				CDE113601AF9E1270073BBB8 /* Frameworks */,
 				5D088F051ADE9454005F0876 /* SmartSchool */,
 				5D088F1F1ADE9455005F0876 /* SmartSchoolTests */,
 				5D088F041ADE9454005F0876 /* Products */,
@@ -126,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5D088F0A1ADE9454005F0876 /* AppDelegate.h */,
-				5D088F0B1ADE9454005F0876 /* AppDelegate.m */,
+				5D088F0B1ADE9454005F0876 /* AppDelegate.mm */,
 				5D088F101ADE9454005F0876 /* Main.storyboard */,
 				5D088F131ADE9454005F0876 /* Images.xcassets */,
 				5D088F151ADE9454005F0876 /* LaunchScreen.xib */,
@@ -281,6 +287,15 @@
 			path = BaseClass;
 			sourceTree = "<group>";
 		};
+		CDE113601AF9E1270073BBB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDE113651AF9E1F30073BBB8 /* mapapi.bundle */,
+				CDE113631AF9E1A20073BBB8 /* BaiduMapAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -369,6 +384,7 @@
 				CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */,
 				5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */,
 				5D088F141ADE9454005F0876 /* Images.xcassets in Resources */,
+				CDE113661AF9E1F30073BBB8 /* mapapi.bundle in Resources */,
 				CDB8AABF1AF700DD00A200C8 /* icon_tabbar_map.png in Resources */,
 				CDB8AAC31AF700DD00A200C8 /* icon_tabbar_talkwith.png in Resources */,
 				CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */,
@@ -432,7 +448,7 @@
 				CD8D7F4F1AF70787000B70A5 /* TaskMainViewController.m in Sources */,
 				CD8D7F4A1AF7076B000B70A5 /* TalkMainViewController.m in Sources */,
 				CD8D7F451AF70756000B70A5 /* MapsMainViewController.m in Sources */,
-				5D088F0C1ADE9454005F0876 /* AppDelegate.m in Sources */,
+				5D088F0C1ADE9454005F0876 /* AppDelegate.mm in Sources */,
 				5D088F091ADE9454005F0876 /* main.m in Sources */,
 				CDB8AAD61AF7064A00A200C8 /* NewsMainViewController.m in Sources */,
 			);
@@ -563,6 +579,10 @@
 			baseConfigurationReference = 452A97064D595B85A442DE68 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartSchool/Frameworks",
+				);
 				INFOPLIST_FILE = SmartSchool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,6 +595,10 @@
 			baseConfigurationReference = A3DFA5746D662A72EE498BBA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartSchool/Frameworks",
+				);
 				INFOPLIST_FILE = SmartSchool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

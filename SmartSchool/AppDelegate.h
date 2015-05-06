@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

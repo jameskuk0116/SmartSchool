@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import <BaiduMapAPI/BMapKit.h>
 
 @interface MapsMainViewController : BaseViewController
+
+@property (nonatomic , strong) BMKMapView *mapView;
 
 @end
