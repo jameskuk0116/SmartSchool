@@ -80,4 +80,13 @@
     //通过通知中心发送通知
     [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:YES];
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.2];
+    [transition setType:@"fromBottom"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+}
 @end

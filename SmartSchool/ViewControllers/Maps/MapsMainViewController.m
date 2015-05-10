@@ -168,6 +168,12 @@
     
     _TaskLocation = nil;
     _TaskLocationName = nil;
+    
+    [super viewWillDisappear:YES];
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.2];
+    [transition setType:@"fromBottom"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
 }
 
 /**
@@ -201,20 +207,20 @@
 
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
     NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
-        BmobObject *obj = _dataArr[segmentedControl.selectedSegmentIndex];
-        NSString *title = [obj objectForKey:@"BulidingName"];
-        NSArray *loc = [[obj objectForKey:@"BulidingLocation"] componentsSeparatedByString:@","];
+    BmobObject *obj = _dataArr[segmentedControl.selectedSegmentIndex];
+    NSString *title = [obj objectForKey:@"BulidingName"];
+    NSArray *loc = [[obj objectForKey:@"BulidingLocation"] componentsSeparatedByString:@","];
     
-        if (_annotation != nil) {
-            [_mapView removeAnnotation:_annotation];
-        }
-        _annotation = [[BMKPointAnnotation alloc]init];
-        CLLocationCoordinate2D coor;
-        coor.longitude = [loc[0] floatValue];
-        coor.latitude = [loc[1] floatValue];
-        _annotation.coordinate = coor;
-        _annotation.title = title;
-        [_mapView addAnnotation:_annotation];
+    if (_annotation != nil) {
+        [_mapView removeAnnotation:_annotation];
+    }
+    _annotation = [[BMKPointAnnotation alloc]init];
+    CLLocationCoordinate2D coor;
+    coor.longitude = [loc[0] floatValue];
+    coor.latitude = [loc[1] floatValue];
+    _annotation.coordinate = coor;
+    _annotation.title = title;
+    [_mapView addAnnotation:_annotation];
 }
 
 - (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
