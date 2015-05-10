@@ -13,12 +13,16 @@
 		5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F151ADE9454005F0876 /* LaunchScreen.xib */; };
 		5D088F231ADE9455005F0876 /* SmartSchoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F221ADE9455005F0876 /* SmartSchoolTests.m */; };
 		BABF7064EA10929A1FD146D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84293381DF87931ADC1CB678 /* libPods.a */; };
+		C88DD6951AFF9257009F8FFE /* YALSunnyRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C88DD6931AFF9257009F8FFE /* YALSunnyRefreshControl.m */; };
+		C88DD6961AFF9257009F8FFE /* YALSunnyRefreshControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = C88DD6941AFF9257009F8FFE /* YALSunnyRefreshControl.xib */; };
+		C88DD69C1AFF9338009F8FFE /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C88DD6991AFF9338009F8FFE /* RGCardViewLayout.m */; };
+		C88DD69F1AFF97B8009F8FFE /* TaskMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88DD69E1AFF97B8009F8FFE /* TaskMain.storyboard */; };
+		C88DD6A21AFF97C9009F8FFE /* TaskMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88DD6A11AFF97C9009F8FFE /* TaskMainViewController.m */; };
+		C88DD6A51AFF9E0D009F8FFE /* TaskMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C88DD6A41AFF9E0D009F8FFE /* TaskMainCollectionViewCell.m */; };
 		CD8D7F451AF70756000B70A5 /* MapsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F431AF70756000B70A5 /* MapsMainViewController.m */; };
 		CD8D7F461AF70756000B70A5 /* MapsMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F441AF70756000B70A5 /* MapsMainViewController.xib */; };
 		CD8D7F4A1AF7076B000B70A5 /* TalkMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F481AF7076B000B70A5 /* TalkMainViewController.m */; };
 		CD8D7F4B1AF7076B000B70A5 /* TalkMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F491AF7076B000B70A5 /* TalkMainViewController.xib */; };
-		CD8D7F4F1AF70787000B70A5 /* TaskMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F4D1AF70787000B70A5 /* TaskMainViewController.m */; };
-		CD8D7F501AF70787000B70A5 /* TaskMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F4E1AF70787000B70A5 /* TaskMainViewController.xib */; };
 		CD8D7F541AF707AF000B70A5 /* MineMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8D7F521AF707AF000B70A5 /* MineMainViewController.m */; };
 		CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */; };
 		CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8D7F591AF7238D000B70A5 /* backgroud_lightgray.png */; };
@@ -59,15 +63,22 @@
 		5D088F221ADE9455005F0876 /* SmartSchoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartSchoolTests.m; sourceTree = "<group>"; };
 		84293381DF87931ADC1CB678 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DFA5746D662A72EE498BBA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C88DD6921AFF9257009F8FFE /* YALSunnyRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALSunnyRefreshControl.h; sourceTree = "<group>"; };
+		C88DD6931AFF9257009F8FFE /* YALSunnyRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALSunnyRefreshControl.m; sourceTree = "<group>"; };
+		C88DD6941AFF9257009F8FFE /* YALSunnyRefreshControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YALSunnyRefreshControl.xib; sourceTree = "<group>"; };
+		C88DD6981AFF9338009F8FFE /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
+		C88DD6991AFF9338009F8FFE /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
+		C88DD69E1AFF97B8009F8FFE /* TaskMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskMain.storyboard; sourceTree = "<group>"; };
+		C88DD6A01AFF97C9009F8FFE /* TaskMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskMainViewController.h; sourceTree = "<group>"; };
+		C88DD6A11AFF97C9009F8FFE /* TaskMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskMainViewController.m; sourceTree = "<group>"; };
+		C88DD6A31AFF9E0D009F8FFE /* TaskMainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskMainCollectionViewCell.h; sourceTree = "<group>"; };
+		C88DD6A41AFF9E0D009F8FFE /* TaskMainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskMainCollectionViewCell.m; sourceTree = "<group>"; };
 		CD8D7F421AF70756000B70A5 /* MapsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsMainViewController.h; sourceTree = "<group>"; };
 		CD8D7F431AF70756000B70A5 /* MapsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsMainViewController.m; sourceTree = "<group>"; };
 		CD8D7F441AF70756000B70A5 /* MapsMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapsMainViewController.xib; sourceTree = "<group>"; };
 		CD8D7F471AF7076B000B70A5 /* TalkMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkMainViewController.h; sourceTree = "<group>"; };
 		CD8D7F481AF7076B000B70A5 /* TalkMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkMainViewController.m; sourceTree = "<group>"; };
 		CD8D7F491AF7076B000B70A5 /* TalkMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkMainViewController.xib; sourceTree = "<group>"; };
-		CD8D7F4C1AF70787000B70A5 /* TaskMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskMainViewController.h; sourceTree = "<group>"; };
-		CD8D7F4D1AF70787000B70A5 /* TaskMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskMainViewController.m; sourceTree = "<group>"; };
-		CD8D7F4E1AF70787000B70A5 /* TaskMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskMainViewController.xib; sourceTree = "<group>"; };
 		CD8D7F511AF707AF000B70A5 /* MineMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMainViewController.h; sourceTree = "<group>"; };
 		CD8D7F521AF707AF000B70A5 /* MineMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMainViewController.m; sourceTree = "<group>"; };
 		CD8D7F531AF707AF000B70A5 /* MineMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineMainViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +147,7 @@
 				5D088F0B1ADE9454005F0876 /* AppDelegate.mm */,
 				5D088F131ADE9454005F0876 /* Images.xcassets */,
 				5D088F151ADE9454005F0876 /* LaunchScreen.xib */,
+				C88DD6901AFF9209009F8FFE /* Tools */,
 				CDB8AACF1AF705E600A200C8 /* BaseClass */,
 				CDB8AAC91AF705D500A200C8 /* ViewControllers */,
 				CDB8AAB31AF700D100A200C8 /* Images */,
@@ -185,6 +197,34 @@
 				A3DFA5746D662A72EE498BBA /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C88DD6901AFF9209009F8FFE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C88DD6971AFF9338009F8FFE /* RGCardViewLayout */,
+				C88DD6911AFF9257009F8FFE /* YALSunnyRefreshControll */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C88DD6911AFF9257009F8FFE /* YALSunnyRefreshControll */ = {
+			isa = PBXGroup;
+			children = (
+				C88DD6921AFF9257009F8FFE /* YALSunnyRefreshControl.h */,
+				C88DD6931AFF9257009F8FFE /* YALSunnyRefreshControl.m */,
+				C88DD6941AFF9257009F8FFE /* YALSunnyRefreshControl.xib */,
+			);
+			path = YALSunnyRefreshControll;
+			sourceTree = "<group>";
+		};
+		C88DD6971AFF9338009F8FFE /* RGCardViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C88DD6981AFF9338009F8FFE /* RGCardViewLayout.h */,
+				C88DD6991AFF9338009F8FFE /* RGCardViewLayout.m */,
+			);
+			path = RGCardViewLayout;
 			sourceTree = "<group>";
 		};
 		CD8D7F581AF7238D000B70A5 /* backgroud */ = {
@@ -271,9 +311,11 @@
 		CDB8AACE1AF705D500A200C8 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				CD8D7F4C1AF70787000B70A5 /* TaskMainViewController.h */,
-				CD8D7F4D1AF70787000B70A5 /* TaskMainViewController.m */,
-				CD8D7F4E1AF70787000B70A5 /* TaskMainViewController.xib */,
+				C88DD6A31AFF9E0D009F8FFE /* TaskMainCollectionViewCell.h */,
+				C88DD6A41AFF9E0D009F8FFE /* TaskMainCollectionViewCell.m */,
+				C88DD6A01AFF97C9009F8FFE /* TaskMainViewController.h */,
+				C88DD6A11AFF97C9009F8FFE /* TaskMainViewController.m */,
+				C88DD69E1AFF97B8009F8FFE /* TaskMain.storyboard */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -348,6 +390,7 @@
 				TargetAttributes = {
 					5D088F021ADE9454005F0876 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 7S2SU97Q5G;
 					};
 					5D088F1B1ADE9455005F0876 = {
 						CreatedOnToolsVersion = 6.3;
@@ -390,7 +433,8 @@
 				CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */,
 				CD8D7F4B1AF7076B000B70A5 /* TalkMainViewController.xib in Resources */,
 				CDB8AAC51AF700DD00A200C8 /* icon_tabbar_task.png in Resources */,
-				CD8D7F501AF70787000B70A5 /* TaskMainViewController.xib in Resources */,
+				C88DD69F1AFF97B8009F8FFE /* TaskMain.storyboard in Resources */,
+				C88DD6961AFF9257009F8FFE /* YALSunnyRefreshControl.xib in Resources */,
 				CD8D7F461AF70756000B70A5 /* MapsMainViewController.xib in Resources */,
 				CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */,
 			);
@@ -445,10 +489,13 @@
 			files = (
 				CD8D7F541AF707AF000B70A5 /* MineMainViewController.m in Sources */,
 				CDB8AAD21AF7060800A200C8 /* BaseViewController.m in Sources */,
-				CD8D7F4F1AF70787000B70A5 /* TaskMainViewController.m in Sources */,
+				C88DD6951AFF9257009F8FFE /* YALSunnyRefreshControl.m in Sources */,
 				CD8D7F4A1AF7076B000B70A5 /* TalkMainViewController.m in Sources */,
+				C88DD6A21AFF97C9009F8FFE /* TaskMainViewController.m in Sources */,
+				C88DD6A51AFF9E0D009F8FFE /* TaskMainCollectionViewCell.m in Sources */,
 				CD8D7F451AF70756000B70A5 /* MapsMainViewController.m in Sources */,
 				5D088F0C1ADE9454005F0876 /* AppDelegate.mm in Sources */,
+				C88DD69C1AFF9338009F8FFE /* RGCardViewLayout.m in Sources */,
 				5D088F091ADE9454005F0876 /* main.m in Sources */,
 				CDB8AAD61AF7064A00A200C8 /* NewsMainViewController.m in Sources */,
 			);
@@ -571,6 +618,7 @@
 			baseConfigurationReference = 452A97064D595B85A442DE68 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SmartSchool/Frameworks",
@@ -640,6 +688,7 @@
 			baseConfigurationReference = A3DFA5746D662A72EE498BBA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SmartSchool/Frameworks",

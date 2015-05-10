@@ -1,23 +1,28 @@
 //
-//  TaskMainViewController.m
-//  SmartSchool
+//  ViewController.m
+//  RGCardViewLayout
 //
-//  Created by saifing_82 on 15/5/4.
-//  Copyright (c) 2015年 guweidong. All rights reserved.
+//  Created by ROBERA GELETA on 1/23/15.
+//  Copyright (c) 2015 ROBERA GELETA. All rights reserved.
 //
+#define TAG 99
 
 #import "TaskMainViewController.h"
-
-@interface TaskMainViewController ()
-
+#import "TaskMainCollectionViewCell.h"
+#import <BmobSDK/Bmob.h>
+@interface TaskMainViewController ()<UICollectionViewDataSource>{
+    NSMutableArray *_dataArr;
+}
 @end
 
 @implementation TaskMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view, typically from a nib.
     [self setTitle:@"任务"];
+    _dataArr = [[NSMutableArray alloc]init];
+    [self getData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,14 +30,54 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)getData{
+    BmobQuery *bquery = [BmobQuery queryWithClassName:@"Task"];
+    [bquery orderByDescending:@"Sort"];
+    [bquery setLimit:9999999];
+    //查找表的数据
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        [_dataArr addObjectsFromArray:array];
+        [_collectionView reloadData];
+    }];
 }
-*/
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return  _dataArr.count;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TaskMainCollectionViewCell *cell = (TaskMainCollectionViewCell  *)[collectionView dequeueReusableCellWithReuseIdentifier:@"reuse" forIndexPath:indexPath];
+    [self configureCell:cell withIndexPath:indexPath];
+    return cell;
+}
+
+- (void)configureCell:(TaskMainCollectionViewCell *)cell withIndexPath:(NSIndexPath *)indexPath
+{
+    UIView  *subview = [cell.contentView viewWithTag:TAG];
+    [subview removeFromSuperview];
+
+    BmobObject *obj = _dataArr[indexPath.section];
+    cell.mainLabel.text = [obj objectForKey:@"TaskName"];
+    cell.secendLabel.text = [obj objectForKey:@"TaskLocationName"];
+    cell.priceLabel.text = [NSString stringWithFormat:@"￥:%@",[obj objectForKey:@"Money"]];
+    cell.gotoMapBtn.tag = indexPath.section;
+    [cell.gotoMapBtn addTarget:self action:@selector(clickGotoBtn:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)clickGotoBtn:(UIButton *)sender{
+    BmobObject *obj = _dataArr[sender.tag];
+    NSDictionary *dict =[[NSDictionary alloc] initWithObjectsAndKeys:[obj objectForKey:@"TaskLocation"],@"TaskLocation",[obj objectForKey:@"TaskLocationName"],@"TaskLocationName", nil];
+    
+    //创建通知
+    NSNotification *notification =[NSNotification notificationWithName:@"gotoMap" object:nil userInfo:dict];
+    
+    //通过通知中心发送通知
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
+}
 @end

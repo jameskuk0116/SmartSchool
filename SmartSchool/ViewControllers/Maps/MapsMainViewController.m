@@ -7,9 +7,16 @@
 //
 
 #import "MapsMainViewController.h"
+#import <BmobSDK/Bmob.h>
+#import "HMSegmentedControl.h"
 
-@interface MapsMainViewController ()<BMKMapViewDelegate>
-
+#define K_GotoSchoolBtn_Hight 30
+#define K_GotoSchoolBtn_width 60
+@interface MapsMainViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>{
+    NSMutableArray *_dataArr;
+    BMKPointAnnotation *_annotation;
+    BMKLocationService *_locService;
+}
 @end
 
 @implementation MapsMainViewController
@@ -19,46 +26,56 @@
     // Do any additional setup after loading the view from its nib.
     [self setTitle:@"地图"];
     
+    _dataArr = [[NSMutableArray alloc]init];
     _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, _viewForShow.frame.size.width, _viewForShow.frame.size.height)];
+    _mapView.scrollEnabled = YES;
+    [_viewForShow addSubview:_mapView];
+    
+    [self setRegion];
+    [self getData];
+    [self getUserLoc];
+    [self setGoToSchoolBtn];
+}
+
+-(void)setGoToSchoolBtn{
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width- (0 + 20 + K_GotoSchoolBtn_width), [UIScreen mainScreen].bounds.size.height - (49 + 64 + 20 + K_GotoSchoolBtn_Hight), K_GotoSchoolBtn_width, K_GotoSchoolBtn_Hight)];
+    [btn setTitle:@"去学校" forState:UIControlStateNormal];
+    [btn.titleLabel setFont:[UIFont systemFontOfSize:13.0]];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(goSchool) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor orangeColor];
+    [btn.layer setMasksToBounds:YES];
+    [btn.layer setCornerRadius:5.0];
+    [self.view addSubview:btn];
+}
+
+-(void)goSchool{
+    /**
+     *  地图中心点设定
+     */
     CLLocationCoordinate2D coor2;
     coor2.longitude = 108.913629;
     coor2.latitude = 34.221686;
     _mapView.centerCoordinate = coor2;
     _mapView.zoomLevel = 17;
-    _mapView.scrollEnabled = YES;
-//    _mapView.showsUserLocation = YES;
-    [_viewForShow addSubview:_mapView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)getUserLoc{
+    //设置定位精确度，默认：kCLLocationAccuracyBest
+    [BMKLocationService setLocationDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+    //指定最小距离更新(米)，默认：kCLDistanceFilterNone
+    [BMKLocationService setLocationDistanceFilter:10.f];
+    
+    //初始化BMKLocationService
+    _locService = [[BMKLocationService alloc]init];
+    _locService.delegate = self;
+    //启动LocationService
+    [_locService startUserLocationService];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
--(void)viewWillAppear:(BOOL)animated
-{
-    [_mapView viewWillAppear];
-    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
-    
-    _mapView.compassPosition = CGPointMake(20, 20);
-    
-    BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-    CLLocationCoordinate2D coor;
-    coor.longitude = 108.913629;
-    coor.latitude = 34.221686;
-    annotation.coordinate = coor;
-    annotation.title = @"西安文理学院";
-    [_mapView addAnnotation:annotation];
-    
+/**
+ *  描出学校边界
+ */
+-(void)setRegion{
     CLLocationCoordinate2D coords[7] = {0};
     coords[0].longitude = 108.908437;
     coords[0].latitude = 34.217701;//108.908437,34.217701
@@ -80,12 +97,82 @@
     [_mapView addOverlay:polygon];
 }
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [_mapView viewWillDisappear];
-    _mapView.delegate = nil; // 不用时，置nil
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
+-(void)getData{
+    BmobQuery *bquery = [BmobQuery queryWithClassName:@"Buliding"];
+    [bquery setLimit:9999999];
+    //查找表的数据
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        [_dataArr addObjectsFromArray:array];
+        [self setSegmentController];
+    }];
+}
+
+-(void)setSegmentController{
+    NSMutableArray *titleNameArr = [[NSMutableArray alloc]init];
+    for (BmobObject *obj in _dataArr) {
+        NSString *title = [obj objectForKey:@"BulidingName"];
+        [titleNameArr addObject:title];
+    }
+    HMSegmentedControl *segmentedControl1 = [[HMSegmentedControl alloc] initWithSectionTitles:titleNameArr];
+    segmentedControl1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
+    segmentedControl1.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 40);
+    segmentedControl1.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    segmentedControl1.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
+    segmentedControl1.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+    segmentedControl1.verticalDividerEnabled = YES;
+    segmentedControl1.selectionIndicatorColor = [UIColor colorWithRed:1.000 green:0.627 blue:0.000 alpha:1.000];
+    segmentedControl1.backgroundColor = [UIColor orangeColor];
+    segmentedControl1.verticalDividerColor = [UIColor colorWithRed:1.000 green:0.627 blue:0.000 alpha:1.000];
+    segmentedControl1.verticalDividerWidth = 1.0f;
+    [segmentedControl1 setTitleFormatter:^NSAttributedString *(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected) {
+        NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+        return attString;
+    }];
+    [segmentedControl1 addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:segmentedControl1];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [_mapView viewWillAppear];
+    _mapView.delegate = self; // 此处记得不用的时候需要置nil，否则影响内存的释放
+    
+    [self goSchool];
+    
+    if (_annotation != nil) {
+        [_mapView removeAnnotation:_annotation];
+    }
+    if (_TaskLocation) {
+        NSArray *loc = [_TaskLocation componentsSeparatedByString:@","];
+        _annotation = [[BMKPointAnnotation alloc]init];
+        CLLocationCoordinate2D coor;
+        coor.longitude = [loc[0] floatValue];
+        coor.latitude = [loc[1] floatValue];
+        _annotation.coordinate = coor;
+        _annotation.title = _TaskLocationName;
+        [_mapView addAnnotation:_annotation];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:YES];
+    [_mapView viewWillDisappear];
+    _mapView.delegate = nil; // 不用时，置nil
+    
+    _TaskLocation = nil;
+    _TaskLocationName = nil;
+}
+
+/**
+ *   标注大头针时的回调
+ */
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
@@ -97,15 +184,49 @@
     return nil;
 }
 
+/**
+ *   描边时的回调
+ */
 - (BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id <BMKOverlay>)overlay{
     if ([overlay isKindOfClass:[BMKPolygon class]]){
         BMKPolygonView* polygonView = [[BMKPolygonView alloc] initWithOverlay:overlay];
         polygonView.strokeColor = [[UIColor orangeColor] colorWithAlphaComponent:1];
-        polygonView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.1];
+        polygonView.fillColor = [[UIColor orangeColor] colorWithAlphaComponent:0.05];
         polygonView.lineWidth = 5.0;
         
         return polygonView;
     }
     return nil;
+}
+
+- (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
+    NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
+        BmobObject *obj = _dataArr[segmentedControl.selectedSegmentIndex];
+        NSString *title = [obj objectForKey:@"BulidingName"];
+        NSArray *loc = [[obj objectForKey:@"BulidingLocation"] componentsSeparatedByString:@","];
+    
+        if (_annotation != nil) {
+            [_mapView removeAnnotation:_annotation];
+        }
+        _annotation = [[BMKPointAnnotation alloc]init];
+        CLLocationCoordinate2D coor;
+        coor.longitude = [loc[0] floatValue];
+        coor.latitude = [loc[1] floatValue];
+        _annotation.coordinate = coor;
+        _annotation.title = title;
+        [_mapView addAnnotation:_annotation];
+}
+
+- (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
+{
+    //NSLog(@"heading is %@",userLocation.heading);
+}
+
+//处理位置坐标更新
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
+{
+    //NSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    _mapView.showsUserLocation = YES;//显示定位图层
+    [_mapView updateLocationData:userLocation];
 }
 @end

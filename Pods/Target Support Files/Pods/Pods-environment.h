@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_BmobSDK 5
 #define COCOAPODS_VERSION_PATCH_BmobSDK 4
 
+// HMSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_HMSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_HMSegmentedControl 1
+#define COCOAPODS_VERSION_MINOR_HMSegmentedControl 5
+#define COCOAPODS_VERSION_PATCH_HMSegmentedControl 1
+
 // RongCloudIMKit
 #define COCOAPODS_POD_AVAILABLE_RongCloudIMKit
 #define COCOAPODS_VERSION_MAJOR_RongCloudIMKit 1

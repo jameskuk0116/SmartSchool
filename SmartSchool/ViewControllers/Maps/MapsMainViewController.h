@@ -14,4 +14,8 @@
 @property (nonatomic , strong) BMKMapView *mapView;
 
 @property (weak, nonatomic) IBOutlet UIView *viewForShow;
+
+@property (nonatomic , strong) NSString *TaskLocation;
+@property (nonatomic , strong) NSString *TaskLocationName;
+
 @end

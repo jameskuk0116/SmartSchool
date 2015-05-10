@@ -1,13 +1,17 @@
 //
-//  TaskMainViewController.h
-//  SmartSchool
+//  ViewController.h
+//  RGCardViewLayout
 //
-//  Created by saifing_82 on 15/5/4.
-//  Copyright (c) 2015年 guweidong. All rights reserved.
+//  Created by ROBERA GELETA on 1/23/15.
+//  Copyright (c) 2015 ROBERA GELETA. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
 @interface TaskMainViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end
+

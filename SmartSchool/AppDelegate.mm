@@ -17,6 +17,7 @@
 @interface AppDelegate ()<UITabBarControllerDelegate>{
     
     BMKMapManager* _mapManager;
+    MapsMainViewController *_mapsView;
 }
 @end
 
@@ -25,12 +26,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoMap:) name:@"gotoMap" object:nil];
+    
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.backgroundColor = [UIColor whiteColor];
     _tabBarController = [[UITabBarController alloc]init];
     NewsMainViewController *newsView = [[NewsMainViewController alloc]init];
-    TaskMainViewController *taskView = [[TaskMainViewController alloc] init];
-    MapsMainViewController *mapsView = [[MapsMainViewController alloc] init];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TaskMain" bundle:nil];
+    UIViewController *taskView = [storyboard instantiateViewControllerWithIdentifier:@"TaskMain"];
+
+//    TaskMainViewController *taskView = [[TaskMainViewController alloc] init];
+    _mapsView= [[MapsMainViewController alloc] init];
     TalkMainViewController *talksView = [[TalkMainViewController alloc] init];
     MineMainViewController *mineView = [[MineMainViewController alloc] init];
     
@@ -44,7 +51,7 @@
     _newsNavViewController.tabBarItem = newsItem;
     _taskNavViewController = [[UINavigationController alloc] initWithRootViewController:taskView];
     _taskNavViewController.tabBarItem = taskItem;
-    _mapsNavViewController = [[UINavigationController alloc] initWithRootViewController:mapsView];
+    _mapsNavViewController = [[UINavigationController alloc] initWithRootViewController:_mapsView];
     _mapsNavViewController.tabBarItem = mapItem;
     _talkNavViewController = [[UINavigationController alloc] initWithRootViewController:talksView];
     _talkNavViewController.tabBarItem = talkItem;
@@ -59,7 +66,7 @@
         _mapsNavViewController.navigationBar.translucent = NO;
         _talkNavViewController.navigationBar.translucent = NO;
         _mineNavViewController.navigationBar.translucent = NO;
-        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:242.0/255.0 green:104.0/255.0 blue:5.0/255.0 alpha:1.0]];
+        [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
     }
     
     [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
@@ -78,7 +85,7 @@
     [_window makeKeyAndVisible];
 
     // 设置选中图片时候
-    _tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:0.925 green:0.322 blue:0.043 alpha:1.000];
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor orangeColor];
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
     BOOL ret = [_mapManager start:@"lrb9zzH6TNDAmZqGqaH0n7oG"  generalDelegate:nil];
@@ -154,4 +161,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)gotoMap:(NSNotification *)text{
+    NSLog(@"%@",text.userInfo[@"TaskLocation"]);
+    _mapsView.TaskLocation = text.userInfo[@"TaskLocation"];
+    _mapsView.TaskLocationName = text.userInfo[@"TaskLocationName"];
+    [_tabBarController setSelectedIndex:2];
+}
 @end
