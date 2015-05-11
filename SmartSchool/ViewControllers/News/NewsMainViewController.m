@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setTitle:@"新闻"];
+    [self setTitle:@"新 闻"];
 }
 
 - (void)didReceiveMemoryWarning {

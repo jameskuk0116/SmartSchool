@@ -1,16 +1,19 @@
 PODS:
   - BmobSDK (1.5.4)
   - HMSegmentedControl (1.5.1)
+  - MBProgressHUD (0.9.1)
   - RongCloudIMKit (1.4.6)
 
 DEPENDENCIES:
   - BmobSDK
   - HMSegmentedControl
+  - MBProgressHUD (~> 0.9.1)
   - RongCloudIMKit
 
 SPEC CHECKSUMS:
   BmobSDK: b16dc6328f1b9a9fee96312a401cdd712f4193b3
   HMSegmentedControl: 35460abdd15c3087368db2d3d956717f088b34d1
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   RongCloudIMKit: 9d0be1f368090457e014b45d862ed1c1c3a039f4
 
 COCOAPODS: 0.36.4

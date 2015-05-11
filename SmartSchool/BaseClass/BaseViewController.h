@@ -9,4 +9,16 @@
 
 @interface BaseViewController : UIViewController
 
+/**
+ *  显示HUD
+ *
+ *  @param HUDtitle 显示内容
+ */
+-(void)showHUDWithTitle:(NSString *)HUDtitle;
+
+/**
+ *  隐藏HUD
+ */
+- (void)hideHUD;
+
 @end

@@ -7,9 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "MBProgressHUD.h"
 
 @interface BaseViewController ()
-
+{
+    MBProgressHUD *_hud;
+}
 @end
 
 @implementation BaseViewController
@@ -25,6 +28,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)showHUDWithTitle:(NSString *)HUDtitle{
+    [_hud hide:YES];
+    
+    _hud = [[MBProgressHUD alloc]initWithView:self.view];
+    [self.view addSubview:_hud];
+    _hud.labelText = HUDtitle;
+    _hud.removeFromSuperViewOnHide = YES;
+    [_hud show:YES];
+}
+
+- (void)hideHUD
+{
+    [_hud hide:YES afterDelay:0.5];
+}
 /*
 #pragma mark - Navigation
 

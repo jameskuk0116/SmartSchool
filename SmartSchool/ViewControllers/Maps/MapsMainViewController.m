@@ -13,6 +13,7 @@
 #define K_GotoSchoolBtn_Hight 30
 #define K_GotoSchoolBtn_width 60
 @interface MapsMainViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>{
+    HMSegmentedControl *_segmentedControl1;
     NSMutableArray *_dataArr;
     BMKPointAnnotation *_annotation;
     BMKLocationService *_locService;
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setTitle:@"地图"];
+    [self setTitle:@"地 图"];
     
     _dataArr = [[NSMutableArray alloc]init];
     _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, _viewForShow.frame.size.width, _viewForShow.frame.size.height)];
@@ -103,10 +104,12 @@
 }
 
 -(void)getData{
+    [self showHUDWithTitle:@"正在加载中..."];
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"Buliding"];
     [bquery setLimit:9999999];
     //查找表的数据
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        [self hideHUD];
         [_dataArr addObjectsFromArray:array];
         [self setSegmentController];
     }];
@@ -118,23 +121,23 @@
         NSString *title = [obj objectForKey:@"BulidingName"];
         [titleNameArr addObject:title];
     }
-    HMSegmentedControl *segmentedControl1 = [[HMSegmentedControl alloc] initWithSectionTitles:titleNameArr];
-    segmentedControl1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
-    segmentedControl1.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 40);
-    segmentedControl1.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
-    segmentedControl1.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
-    segmentedControl1.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
-    segmentedControl1.verticalDividerEnabled = YES;
-    segmentedControl1.selectionIndicatorColor = [UIColor colorWithRed:1.000 green:0.627 blue:0.000 alpha:1.000];
-    segmentedControl1.backgroundColor = [UIColor orangeColor];
-    segmentedControl1.verticalDividerColor = [UIColor colorWithRed:1.000 green:0.627 blue:0.000 alpha:1.000];
-    segmentedControl1.verticalDividerWidth = 1.0f;
-    [segmentedControl1 setTitleFormatter:^NSAttributedString *(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected) {
+    _segmentedControl1 = [[HMSegmentedControl alloc] initWithSectionTitles:titleNameArr];
+    _segmentedControl1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
+    _segmentedControl1.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 40);
+    _segmentedControl1.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    _segmentedControl1.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
+    _segmentedControl1.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+    _segmentedControl1.verticalDividerEnabled = YES;
+    _segmentedControl1.selectionIndicatorColor = [UIColor colorWithRed:1.000 green:0.627 blue:0.000 alpha:1.000];
+    _segmentedControl1.backgroundColor = [UIColor orangeColor];
+    _segmentedControl1.verticalDividerColor = [UIColor colorWithRed:1.000 green:0.627 blue:0.000 alpha:1.000];
+    _segmentedControl1.verticalDividerWidth = 1.0f;
+    [_segmentedControl1 setTitleFormatter:^NSAttributedString *(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected) {
         NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
         return attString;
     }];
-    [segmentedControl1 addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:segmentedControl1];
+    [_segmentedControl1 addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_segmentedControl1];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -168,8 +171,7 @@
     
     _TaskLocation = nil;
     _TaskLocationName = nil;
-    
-    [super viewWillDisappear:YES];
+
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.2];
     [transition setType:@"fromBottom"];

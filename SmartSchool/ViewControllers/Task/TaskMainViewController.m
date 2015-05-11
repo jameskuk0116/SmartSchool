@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self setTitle:@"任务"];
+    [self setTitle:@"任 务"];
     _dataArr = [[NSMutableArray alloc]init];
     [self getData];
 }
@@ -31,11 +31,13 @@
 }
 
 -(void)getData{
+    [self showHUDWithTitle:@"正在加载中..."];
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"Task"];
-    [bquery orderByDescending:@"Sort"];
+    [bquery orderByAscending:@"Sort"];
     [bquery setLimit:9999999];
     //查找表的数据
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        [self hideHUD];
         [_dataArr addObjectsFromArray:array];
         [_collectionView reloadData];
     }];
