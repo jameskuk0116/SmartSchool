@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface NewsMainViewController : BaseViewController
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *imageURLs;
 @end

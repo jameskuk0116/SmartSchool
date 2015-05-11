@@ -1,23 +1,26 @@
 //
-//  NewsMainViewController.m
+//  WebViewController.m
 //  SmartSchool
 //
-//  Created by saifing_82 on 15/5/4.
+//  Created by gwd on 15/5/12.
 //  Copyright (c) 2015年 guweidong. All rights reserved.
 //
 
-#import "NewsMainViewController.h"
+#import "WebViewController.h"
 
-@interface NewsMainViewController ()
+@interface WebViewController ()
 
 @end
 
-@implementation NewsMainViewController
+@implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self setTitle:@"新 闻"];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+//    [_webView setScalesPageToFit:YES];
+    [_webView loadHTMLString:_htmlStr baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,12 +38,4 @@
 }
 */
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:YES];
-    CATransition *transition = [CATransition animation];
-    [transition setDuration:0.2];
-    [transition setType:@"fromBottom"];
-    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
-}
 @end

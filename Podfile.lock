@@ -1,19 +1,56 @@
 PODS:
+  - AFNetworking (2.5.3):
+    - AFNetworking/NSURLConnection (= 2.5.3)
+    - AFNetworking/NSURLSession (= 2.5.3)
+    - AFNetworking/Reachability (= 2.5.3)
+    - AFNetworking/Security (= 2.5.3)
+    - AFNetworking/Serialization (= 2.5.3)
+    - AFNetworking/UIKit (= 2.5.3)
+  - AFNetworking/NSURLConnection (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.3)
+  - AFNetworking/Security (2.5.3)
+  - AFNetworking/Serialization (2.5.3)
+  - AFNetworking/UIKit (2.5.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - BmobSDK (1.5.4)
   - HMSegmentedControl (1.5.1)
+  - ImagePlayerView (1.0.2)
   - MBProgressHUD (0.9.1)
+  - MJRefresh (1.4.6)
+  - Qiniu (7.0.9.1):
+    - AFNetworking (~> 2.0)
   - RongCloudIMKit (1.4.6)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
   - BmobSDK
   - HMSegmentedControl
+  - ImagePlayerView
   - MBProgressHUD (~> 0.9.1)
+  - MJRefresh
+  - Qiniu (~> 7.0)
   - RongCloudIMKit
+  - SDWebImage
 
 SPEC CHECKSUMS:
+  AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
   BmobSDK: b16dc6328f1b9a9fee96312a401cdd712f4193b3
   HMSegmentedControl: 35460abdd15c3087368db2d3d956717f088b34d1
+  ImagePlayerView: f32dbbaf9aea86d25f5ccba7fb67f644b56f9464
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7
+  Qiniu: cd281425298a3f30495135ab9a9442bf400dab28
   RongCloudIMKit: 9d0be1f368090457e014b45d862ed1c1c3a039f4
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
 COCOAPODS: 0.36.4

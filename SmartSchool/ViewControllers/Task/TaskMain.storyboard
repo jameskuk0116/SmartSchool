@@ -37,7 +37,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wGd-rg-d7r">
                                                     <rect key="frame" x="0.0" y="0.0" width="363" height="400"/>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.68627450980392157" green="0.70196078431372544" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-Pk-iDy">
                                                     <rect key="frame" x="0.0" y="400" width="363" height="208"/>

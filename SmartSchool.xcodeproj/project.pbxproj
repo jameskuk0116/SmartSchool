@@ -13,6 +13,15 @@
 		5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D088F151ADE9454005F0876 /* LaunchScreen.xib */; };
 		5D088F231ADE9455005F0876 /* SmartSchoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D088F221ADE9455005F0876 /* SmartSchoolTests.m */; };
 		BABF7064EA10929A1FD146D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84293381DF87931ADC1CB678 /* libPods.a */; };
+		C80C5E021B00F46A004CFDC0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80C5E001B00F46A004CFDC0 /* LoginViewController.m */; };
+		C80C5E031B00F46A004CFDC0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C80C5E011B00F46A004CFDC0 /* LoginViewController.xib */; };
+		C80C5E061B00F707004CFDC0 /* icon_user.png in Resources */ = {isa = PBXBuildFile; fileRef = C80C5E041B00F707004CFDC0 /* icon_user.png */; };
+		C80C5E071B00F707004CFDC0 /* icon_passwd.png in Resources */ = {isa = PBXBuildFile; fileRef = C80C5E051B00F707004CFDC0 /* icon_passwd.png */; };
+		C80C5E0B1B00FAC6004CFDC0 /* OTCover.m in Sources */ = {isa = PBXBuildFile; fileRef = C80C5E0A1B00FAC6004CFDC0 /* OTCover.m */; };
+		C80C5E121B010098004CFDC0 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C80C5E101B010098004CFDC0 /* NewsTableViewCell.m */; };
+		C80C5E131B010098004CFDC0 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C80C5E111B010098004CFDC0 /* NewsTableViewCell.xib */; };
+		C80C5E181B010D50004CFDC0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80C5E161B010D50004CFDC0 /* WebViewController.m */; };
+		C80C5E191B010D50004CFDC0 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C80C5E171B010D50004CFDC0 /* WebViewController.xib */; };
 		C88DD6951AFF9257009F8FFE /* YALSunnyRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C88DD6931AFF9257009F8FFE /* YALSunnyRefreshControl.m */; };
 		C88DD6961AFF9257009F8FFE /* YALSunnyRefreshControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = C88DD6941AFF9257009F8FFE /* YALSunnyRefreshControl.xib */; };
 		C88DD69C1AFF9338009F8FFE /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C88DD6991AFF9338009F8FFE /* RGCardViewLayout.m */; };
@@ -63,6 +72,19 @@
 		5D088F221ADE9455005F0876 /* SmartSchoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartSchoolTests.m; sourceTree = "<group>"; };
 		84293381DF87931ADC1CB678 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DFA5746D662A72EE498BBA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C80C5DFF1B00F46A004CFDC0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C80C5E001B00F46A004CFDC0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C80C5E011B00F46A004CFDC0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C80C5E041B00F707004CFDC0 /* icon_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_user.png; sourceTree = "<group>"; };
+		C80C5E051B00F707004CFDC0 /* icon_passwd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_passwd.png; sourceTree = "<group>"; };
+		C80C5E091B00FAC6004CFDC0 /* OTCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTCover.h; sourceTree = "<group>"; };
+		C80C5E0A1B00FAC6004CFDC0 /* OTCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTCover.m; sourceTree = "<group>"; };
+		C80C5E0F1B010098004CFDC0 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		C80C5E101B010098004CFDC0 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		C80C5E111B010098004CFDC0 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		C80C5E151B010D50004CFDC0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		C80C5E161B010D50004CFDC0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		C80C5E171B010D50004CFDC0 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		C88DD6921AFF9257009F8FFE /* YALSunnyRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALSunnyRefreshControl.h; sourceTree = "<group>"; };
 		C88DD6931AFF9257009F8FFE /* YALSunnyRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALSunnyRefreshControl.m; sourceTree = "<group>"; };
 		C88DD6941AFF9257009F8FFE /* YALSunnyRefreshControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YALSunnyRefreshControl.xib; sourceTree = "<group>"; };
@@ -199,9 +221,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C80C5DFE1B00EE33004CFDC0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C80C5DFF1B00F46A004CFDC0 /* LoginViewController.h */,
+				C80C5E001B00F46A004CFDC0 /* LoginViewController.m */,
+				C80C5E011B00F46A004CFDC0 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C80C5E081B00FAC6004CFDC0 /* OTCover */ = {
+			isa = PBXGroup;
+			children = (
+				C80C5E091B00FAC6004CFDC0 /* OTCover.h */,
+				C80C5E0A1B00FAC6004CFDC0 /* OTCover.m */,
+			);
+			path = OTCover;
+			sourceTree = "<group>";
+		};
 		C88DD6901AFF9209009F8FFE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C80C5E081B00FAC6004CFDC0 /* OTCover */,
 				C88DD6971AFF9338009F8FFE /* RGCardViewLayout */,
 				C88DD6911AFF9257009F8FFE /* YALSunnyRefreshControll */,
 			);
@@ -238,6 +280,8 @@
 		CDB8AAB31AF700D100A200C8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C80C5E041B00F707004CFDC0 /* icon_user.png */,
+				C80C5E051B00F707004CFDC0 /* icon_passwd.png */,
 				CD8D7F581AF7238D000B70A5 /* backgroud */,
 				CDB8AAB41AF700DD00A200C8 /* icon_tabbar */,
 			);
@@ -264,7 +308,7 @@
 				CDB8AACD1AF705D500A200C8 /* Talk */,
 				CDB8AACE1AF705D500A200C8 /* Task */,
 				CDB8AACB1AF705D500A200C8 /* Mine */,
-				CDD2839D1B00831800A6D443 /* Login */,
+				C80C5DFE1B00EE33004CFDC0 /* Login */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,6 +339,12 @@
 				CDB8AAD31AF7064A00A200C8 /* NewsMainViewController.h */,
 				CDB8AAD41AF7064A00A200C8 /* NewsMainViewController.m */,
 				CDB8AAD51AF7064A00A200C8 /* NewsMainViewController.xib */,
+				C80C5E0F1B010098004CFDC0 /* NewsTableViewCell.h */,
+				C80C5E101B010098004CFDC0 /* NewsTableViewCell.m */,
+				C80C5E111B010098004CFDC0 /* NewsTableViewCell.xib */,
+				C80C5E151B010D50004CFDC0 /* WebViewController.h */,
+				C80C5E161B010D50004CFDC0 /* WebViewController.m */,
+				C80C5E171B010D50004CFDC0 /* WebViewController.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -328,13 +378,6 @@
 				CDB8AAD11AF7060800A200C8 /* BaseViewController.m */,
 			);
 			path = BaseClass;
-			sourceTree = "<group>";
-		};
-		CDD2839D1B00831800A6D443 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		CDE113601AF9E1270073BBB8 /* Frameworks */ = {
@@ -430,20 +473,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80C5E031B00F46A004CFDC0 /* LoginViewController.xib in Resources */,
 				CDB8AAC71AF700DD00A200C8 /* icon_tabbar_user.png in Resources */,
 				CDB8AAC11AF700DD00A200C8 /* icon_tabbar_news.png in Resources */,
+				C80C5E191B010D50004CFDC0 /* WebViewController.xib in Resources */,
 				CD8D7F551AF707AF000B70A5 /* MineMainViewController.xib in Resources */,
 				5D088F171ADE9454005F0876 /* LaunchScreen.xib in Resources */,
 				5D088F141ADE9454005F0876 /* Images.xcassets in Resources */,
 				CDE113661AF9E1F30073BBB8 /* mapapi.bundle in Resources */,
+				C80C5E061B00F707004CFDC0 /* icon_user.png in Resources */,
 				CDB8AABF1AF700DD00A200C8 /* icon_tabbar_map.png in Resources */,
 				CDB8AAC31AF700DD00A200C8 /* icon_tabbar_talkwith.png in Resources */,
 				CD8D7F5A1AF7238D000B70A5 /* backgroud_lightgray.png in Resources */,
 				CD8D7F4B1AF7076B000B70A5 /* TalkMainViewController.xib in Resources */,
+				C80C5E071B00F707004CFDC0 /* icon_passwd.png in Resources */,
 				CDB8AAC51AF700DD00A200C8 /* icon_tabbar_task.png in Resources */,
 				C88DD69F1AFF97B8009F8FFE /* TaskMain.storyboard in Resources */,
 				C88DD6961AFF9257009F8FFE /* YALSunnyRefreshControl.xib in Resources */,
 				CD8D7F461AF70756000B70A5 /* MapsMainViewController.xib in Resources */,
+				C80C5E131B010098004CFDC0 /* NewsTableViewCell.xib in Resources */,
 				CDB8AAD71AF7064A00A200C8 /* NewsMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,13 +544,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8D7F541AF707AF000B70A5 /* MineMainViewController.m in Sources */,
+				C80C5E181B010D50004CFDC0 /* WebViewController.m in Sources */,
 				CDB8AAD21AF7060800A200C8 /* BaseViewController.m in Sources */,
 				C88DD6951AFF9257009F8FFE /* YALSunnyRefreshControl.m in Sources */,
 				CD8D7F4A1AF7076B000B70A5 /* TalkMainViewController.m in Sources */,
 				C88DD6A21AFF97C9009F8FFE /* TaskMainViewController.m in Sources */,
 				C88DD6A51AFF9E0D009F8FFE /* TaskMainCollectionViewCell.m in Sources */,
+				C80C5E121B010098004CFDC0 /* NewsTableViewCell.m in Sources */,
 				CD8D7F451AF70756000B70A5 /* MapsMainViewController.m in Sources */,
+				C80C5E0B1B00FAC6004CFDC0 /* OTCover.m in Sources */,
 				5D088F0C1ADE9454005F0876 /* AppDelegate.mm in Sources */,
+				C80C5E021B00F46A004CFDC0 /* LoginViewController.m in Sources */,
 				C88DD69C1AFF9338009F8FFE /* RGCardViewLayout.m in Sources */,
 				5D088F091ADE9454005F0876 /* main.m in Sources */,
 				CDB8AAD61AF7064A00A200C8 /* NewsMainViewController.m in Sources */,

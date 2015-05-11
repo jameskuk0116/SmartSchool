@@ -74,7 +74,7 @@
                                            _taskNavViewController,
                                            _mapsNavViewController,
                                            _talkNavViewController,
-                                           _mineNavViewController,
+//                                           _mineNavViewController,
                                            nil]];
     
     _tabBarController.hidesBottomBarWhenPushed = YES;

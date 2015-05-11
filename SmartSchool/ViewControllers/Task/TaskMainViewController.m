@@ -10,6 +10,7 @@
 #import "TaskMainViewController.h"
 #import "TaskMainCollectionViewCell.h"
 #import <BmobSDK/Bmob.h>
+#import "UIImageView+WebCache.h"
 @interface TaskMainViewController ()<UICollectionViewDataSource>{
     NSMutableArray *_dataArr;
 }
@@ -68,6 +69,9 @@
     cell.mainLabel.text = [obj objectForKey:@"TaskName"];
     cell.secendLabel.text = [obj objectForKey:@"TaskLocationName"];
     cell.priceLabel.text = [NSString stringWithFormat:@"￥:%@",[obj objectForKey:@"Money"]];
+    NSString *urlStr = [obj objectForKey:@"Image"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    [cell.imageView sd_setImageWithURL:url];
     cell.gotoMapBtn.tag = indexPath.section;
     [cell.gotoMapBtn addTarget:self action:@selector(clickGotoBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
