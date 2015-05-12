@@ -17,6 +17,7 @@
 {
     NSMutableArray *_newsArr;
     ImagePlayerView *_imagePlayerView;
+    NSMutableArray *_imgArr;
 }
 @end
 
@@ -28,6 +29,7 @@
     [self setTitle:@"新 闻"];
     [self getData];
     _newsArr = [[NSMutableArray alloc]init];
+    _imgArr = [[NSMutableArray alloc]init];
     _imageURLs = [[NSMutableArray alloc]init];
     
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(CGFLOAT_MIN,CGFLOAT_MIN,CGFLOAT_MIN, CGFLOAT_MIN)];
@@ -35,7 +37,7 @@
     [_tableView setTableHeaderView:view];
     [_tableView setTableFooterView:view];
     
-    _imagePlayerView = [[ImagePlayerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 160)];
+    _imagePlayerView = [[ImagePlayerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
     _imagePlayerView.imagePlayerViewDelegate = self;
     // set auto scroll interval to x seconds
     _imagePlayerView.scrollInterval = 5.0f;
@@ -104,12 +106,14 @@
     [bquery setSkip:0];
     //查找表的数据
     [_imageURLs removeAllObjects];
+    [_imgArr removeAllObjects];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         for ( BmobObject *obj in array) {
             NSString *urlStr = [obj objectForKey:@"NewsImage"];
             NSURL *url = [NSURL URLWithString:urlStr];
             [_imageURLs addObject:url];
         }
+        [_imgArr addObjectsFromArray:array];
         [_imagePlayerView reloadData];
     }];
 }
@@ -124,7 +128,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        UITableViewCell *cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 160)];
+        UITableViewCell *cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
         [cell setBackgroundColor:[UIColor orangeColor]];
         [cell addSubview:_imagePlayerView];
         return cell;
@@ -168,7 +172,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 160;
+        return 200;
     }else{
       NewsTableViewCell *cell =[[[NSBundle mainBundle] loadNibNamed:@"NewsTableViewCell" owner:self options:nil] objectAtIndex:0];
         return cell.frame.size.height;
@@ -194,7 +198,7 @@
 - (void)imagePlayerView:(ImagePlayerView *)imagePlayerView didTapAtIndex:(NSInteger)index
 {
     NSLog(@"did tap index = %d", (int)index);
-    BmobObject *obj = _newsArr[index];
+    BmobObject *obj = _imgArr[index];
     WebViewController *web = [[WebViewController alloc]init];
     web.htmlStr = [obj objectForKey:@"Content"];
     web.hidesBottomBarWhenPushed = YES;

@@ -43,9 +43,9 @@
     [btn setTitle:@"帮一下" forState:UIControlStateNormal];
     [btn.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn addTarget: self action: @selector(leftBarButtonItemPressed:) forControlEvents: UIControlEventTouchUpInside];
+    [btn addTarget: self action: @selector(rightBarButtonItemPressed:) forControlEvents: UIControlEventTouchUpInside];
     UIBarButtonItem *btnItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
-    self.navigationItem.leftBarButtonItem = btnItem;
+    self.navigationItem.rightBarButtonItem = btnItem;
 }
 
 -(void)syncGroups{
@@ -70,7 +70,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)leftBarButtonItemPressed:(UIButton *)sender{
+-(void)rightBarButtonItemPressed:(UIButton *)sender{
     // 创建客服聊天视图控制器。
     RCChatViewController *chatViewController = [[RCIM sharedRCIM]createCustomerService:@"KEFU1430906042741" title:@"帮帮忙" completion:^(){
         // 创建 ViewController 后，调用的 Block，可以用来实现自定义行为。
@@ -96,5 +96,9 @@
     [transition setDuration:0.2];
     [transition setType:@"fromBottom"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 @end

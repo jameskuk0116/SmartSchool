@@ -13,6 +13,7 @@
 #import "TalkMainViewController.h"
 #import "MineMainViewController.h"
 #import "RCIM.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>{
     
@@ -40,6 +41,7 @@
     _mapsView= [[MapsMainViewController alloc] init];
     TalkMainViewController *talksView = [[TalkMainViewController alloc] init];
     MineMainViewController *mineView = [[MineMainViewController alloc] init];
+    LoginViewController *logView = [[LoginViewController alloc]init];
     
     UITabBarItem *newsItem=[[UITabBarItem alloc]initWithTitle:@"新闻" image:[UIImage imageNamed:@"icon_tabbar_news"] tag:1];
     UITabBarItem *taskItem=[[UITabBarItem alloc]initWithTitle:@"任务" image:[UIImage imageNamed:@"icon_tabbar_task"] tag:2];
@@ -53,7 +55,7 @@
     _taskNavViewController.tabBarItem = taskItem;
     _mapsNavViewController = [[UINavigationController alloc] initWithRootViewController:_mapsView];
     _mapsNavViewController.tabBarItem = mapItem;
-    _talkNavViewController = [[UINavigationController alloc] initWithRootViewController:talksView];
+    _talkNavViewController = [[UINavigationController alloc] initWithRootViewController:logView];
     _talkNavViewController.tabBarItem = talkItem;
     _mineNavViewController = [[UINavigationController alloc] initWithRootViewController:mineView];
     _mineNavViewController.tabBarItem = mineItem;
