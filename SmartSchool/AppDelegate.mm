@@ -27,87 +27,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /**
+     *  注册地图通知
+     *
+     *  @param gotoMap: 触发切换地图方法
+     *
+     *  @return nil
+     */
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoMap:) name:@"gotoMap" object:nil];
     
-    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    _window.backgroundColor = [UIColor whiteColor];
-    _tabBarController = [[UITabBarController alloc]init];
-    NewsMainViewController *newsView = [[NewsMainViewController alloc]init];
+    /**
+     *  构建UI
+     */
+    [self setUI];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TaskMain" bundle:nil];
-    UIViewController *taskView = [storyboard instantiateViewControllerWithIdentifier:@"TaskMain"];
-
-//    TaskMainViewController *taskView = [[TaskMainViewController alloc] init];
-    _mapsView= [[MapsMainViewController alloc] init];
-    TalkMainViewController *talksView = [[TalkMainViewController alloc] init];
-    MineMainViewController *mineView = [[MineMainViewController alloc] init];
-    LoginViewController *logView = [[LoginViewController alloc]init];
+    /**
+     *  设置百度地图管理器和key
+     */
+    [self setBaiduMap];
     
-    UITabBarItem *newsItem=[[UITabBarItem alloc]initWithTitle:@"新闻" image:[UIImage imageNamed:@"icon_tabbar_news"] tag:1];
-    UITabBarItem *taskItem=[[UITabBarItem alloc]initWithTitle:@"任务" image:[UIImage imageNamed:@"icon_tabbar_task"] tag:2];
-    UITabBarItem *mapItem=[[UITabBarItem alloc]initWithTitle:@"地图" image:[UIImage imageNamed:@"icon_tabbar_map"] tag:3];
-    UITabBarItem *talkItem=[[UITabBarItem alloc]initWithTitle:@"聊天" image:[UIImage imageNamed:@"icon_tabbar_talkwith"] tag:4];
-    UITabBarItem *mineItem=[[UITabBarItem alloc]initWithTitle:@"我的" image:[UIImage imageNamed:@"icon_tabbar_user"] tag:5];
+    /**
+     *  设置融云key和通知形式
+     */
+    [self setRongCloud];
     
-    _newsNavViewController = [[UINavigationController alloc] initWithRootViewController:newsView];
-    _newsNavViewController.tabBarItem = newsItem;
-    _taskNavViewController = [[UINavigationController alloc] initWithRootViewController:taskView];
-    _taskNavViewController.tabBarItem = taskItem;
-    _mapsNavViewController = [[UINavigationController alloc] initWithRootViewController:_mapsView];
-    _mapsNavViewController.tabBarItem = mapItem;
-    _talkNavViewController = [[UINavigationController alloc] initWithRootViewController:logView];
-    _talkNavViewController.tabBarItem = talkItem;
-    _mineNavViewController = [[UINavigationController alloc] initWithRootViewController:mineView];
-    _mineNavViewController.tabBarItem = mineItem;
-    
-    if ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7) {
-        //设置状态栏
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-        _newsNavViewController.navigationBar.translucent = NO;
-        _taskNavViewController.navigationBar.translucent = NO;
-        _mapsNavViewController.navigationBar.translucent = NO;
-        _talkNavViewController.navigationBar.translucent = NO;
-        _mineNavViewController.navigationBar.translucent = NO;
-        [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
-    }
-    
-    [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
-                                           _newsNavViewController,
-                                           _taskNavViewController,
-                                           _mapsNavViewController,
-                                           _talkNavViewController,
-//                                           _mineNavViewController,
-                                           nil]];
-    
-    _tabBarController.hidesBottomBarWhenPushed = YES;
-    _tabBarController.selectedIndex = 0;
-    _tabBarController.delegate = self;
-    _window.userInteractionEnabled = YES;
-    [_window setRootViewController:_tabBarController];
-    [_window makeKeyAndVisible];
-
-    // 设置选中图片时候
-    _tabBarController.tabBar.selectedImageTintColor = [UIColor orangeColor];
-    _mapManager = [[BMKMapManager alloc]init];
-    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:@"lrb9zzH6TNDAmZqGqaH0n7oG"  generalDelegate:nil];
-    if (!ret) {
-        NSLog(@"manager start failed!");
-    }
-
-    // 初始化 SDK，传入 App Key，deviceToken 暂时为空，等待获取权限。
-    [RCIM initWithAppKey:@"vnroth0krco6o" deviceToken:nil];
-    
-#ifdef __IPHONE_8_0
-    // 在 iOS 8 下注册苹果推送，申请推送权限。
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
-                                                                                         |UIUserNotificationTypeSound
-                                                                                         |UIUserNotificationTypeAlert) categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-#else
-    // 注册苹果推送，申请推送权限。
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
-#endif
     return YES;
 }
 
@@ -120,6 +64,7 @@
 
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
 {
+
     // Handle the actions.
     if ([identifier isEqualToString:@"declineAction"]){
     }
@@ -132,6 +77,10 @@
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // 设置 deviceToken。
+    
+    /**
+     *  给融云设置设备Token
+     */
     [[RCIM sharedRCIM] setDeviceToken:deviceToken];
 }
 
@@ -163,10 +112,149 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+/**
+ *  接收到去地图的通知，触发方法
+ *
+ *  @param text 通知携带的经纬度和名称信息
+ */
 - (void)gotoMap:(NSNotification *)text{
     NSLog(@"%@",text.userInfo[@"TaskLocation"]);
     _mapsView.TaskLocation = text.userInfo[@"TaskLocation"];
     _mapsView.TaskLocationName = text.userInfo[@"TaskLocationName"];
     [_tabBarController setSelectedIndex:2];
+}
+
+/**
+ *  构建UI
+ */
+-(void)setUI{
+    /**
+     获取主window
+     
+     :returns: nil
+     */
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window.backgroundColor = [UIColor whiteColor];
+    
+    /**
+     实例化tabbar
+     */
+    _tabBarController = [[UITabBarController alloc]init];
+    
+    /**
+     实例化四个模块类
+     */
+    NewsMainViewController *newsView = [[NewsMainViewController alloc]init];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TaskMain" bundle:nil];
+    UIViewController *taskView = [storyboard instantiateViewControllerWithIdentifier:@"TaskMain"];
+    //    TaskMainViewController *taskView = [[TaskMainViewController alloc] init];
+    _mapsView= [[MapsMainViewController alloc] init];
+//    TalkMainViewController *talksView = [[TalkMainViewController alloc] init];
+    MineMainViewController *mineView = [[MineMainViewController alloc] init];
+    LoginViewController *logView = [[LoginViewController alloc]init];
+    
+    /**
+     设置每个TabBarItem的内容
+     */
+    UITabBarItem *newsItem=[[UITabBarItem alloc]initWithTitle:@"新闻" image:[UIImage imageNamed:@"icon_tabbar_news"] tag:1];
+    UITabBarItem *taskItem=[[UITabBarItem alloc]initWithTitle:@"任务" image:[UIImage imageNamed:@"icon_tabbar_task"] tag:2];
+    UITabBarItem *mapItem=[[UITabBarItem alloc]initWithTitle:@"地图" image:[UIImage imageNamed:@"icon_tabbar_map"] tag:3];
+    UITabBarItem *talkItem=[[UITabBarItem alloc]initWithTitle:@"聊天" image:[UIImage imageNamed:@"icon_tabbar_talkwith"] tag:4];
+    UITabBarItem *mineItem=[[UITabBarItem alloc]initWithTitle:@"我的" image:[UIImage imageNamed:@"icon_tabbar_user"] tag:5];
+    
+    /**
+     为实例化后的四个模块绑定NavigationBar和TabBarItem
+     
+     :returns: nil
+     */
+    _newsNavViewController = [[UINavigationController alloc] initWithRootViewController:newsView];
+    _newsNavViewController.tabBarItem = newsItem;
+    _taskNavViewController = [[UINavigationController alloc] initWithRootViewController:taskView];
+    _taskNavViewController.tabBarItem = taskItem;
+    _mapsNavViewController = [[UINavigationController alloc] initWithRootViewController:_mapsView];
+    _mapsNavViewController.tabBarItem = mapItem;
+    _talkNavViewController = [[UINavigationController alloc] initWithRootViewController:logView];
+    _talkNavViewController.tabBarItem = talkItem;
+    _mineNavViewController = [[UINavigationController alloc] initWithRootViewController:mineView];
+    _mineNavViewController.tabBarItem = mineItem;
+    
+    /**
+     *  自定义状态栏和navigationBar
+     */
+    if ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7) {
+        //设置状态栏
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        _newsNavViewController.navigationBar.translucent = NO;
+        _taskNavViewController.navigationBar.translucent = NO;
+        _mapsNavViewController.navigationBar.translucent = NO;
+        _talkNavViewController.navigationBar.translucent = NO;
+        _mineNavViewController.navigationBar.translucent = NO;
+        [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+    }
+    
+    [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
+                                           _newsNavViewController,
+                                           _taskNavViewController,
+                                           _mapsNavViewController,
+                                           _talkNavViewController,
+                                           //                                           _mineNavViewController,
+                                           nil]];
+    
+    /**
+     *  push时隐藏bottom
+     */
+    _tabBarController.hidesBottomBarWhenPushed = YES;
+    
+    /**
+     *  tabbar默认选中的索引
+     */
+    _tabBarController.selectedIndex = 0;
+    
+    /**
+     *  设置tabbar代理
+     */
+    _tabBarController.delegate = self;
+    
+    /**
+     *  响应UI事件
+     */
+    _window.userInteractionEnabled = YES;
+    [_window setRootViewController:_tabBarController];
+    [_window makeKeyAndVisible];
+    
+    // 设置选中图片时候
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor orangeColor];
+}
+
+/**
+ *  设置百度地图管理器和key
+ */
+-(void)setBaiduMap{
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"lrb9zzH6TNDAmZqGqaH0n7oG"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+}
+
+/**
+ *  设置融云key并注册通知形式
+ */
+-(void)setRongCloud{
+    // 初始化 SDK，传入 App Key，deviceToken 暂时为空，等待获取权限。
+    [RCIM initWithAppKey:@"vnroth0krco6o" deviceToken:nil];
+    
+#ifdef __IPHONE_8_0
+    // 在 iOS 8 下注册苹果推送，申请推送权限。
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
+                                                                                         |UIUserNotificationTypeSound
+                                                                                         |UIUserNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+#else
+    // 注册苹果推送，申请推送权限。
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+#endif
 }
 @end

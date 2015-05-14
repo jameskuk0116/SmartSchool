@@ -31,6 +31,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ *  获取数据
+ */
 -(void)getData{
     [self showHUDWithTitle:@"正在加载中..."];
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"Task"];
@@ -44,6 +47,7 @@
     }];
 }
 
+#pragma mark - collectionView数据源方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 1;
@@ -76,6 +80,11 @@
     [cell.gotoMapBtn addTarget:self action:@selector(clickGotoBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+/**
+ *  点击去哪里按钮
+ *
+ *  @param sender 被点击的按钮
+ */
 -(void)clickGotoBtn:(UIButton *)sender{
     BmobObject *obj = _dataArr[sender.tag];
     NSDictionary *dict =[[NSDictionary alloc] initWithObjectsAndKeys:[obj objectForKey:@"TaskLocation"],@"TaskLocation",[obj objectForKey:@"TaskLocationName"],@"TaskLocationName", nil];
@@ -89,6 +98,9 @@
 
 -(void)viewWillDisappear:(BOOL)animated
 {
+    /**
+     *  添加页面切换的动画
+     */
     [super viewWillDisappear:YES];
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.2];

@@ -28,6 +28,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ *  显示HUD
+ *
+ *  @param HUDtitle 要显示的内容
+ */
 -(void)showHUDWithTitle:(NSString *)HUDtitle{
     [_hud hide:YES];
     
@@ -38,6 +43,9 @@
     [_hud show:YES];
 }
 
+/**
+ *  隐藏HUD
+ */
 - (void)hideHUD
 {
     [_hud hide:YES afterDelay:0.5];

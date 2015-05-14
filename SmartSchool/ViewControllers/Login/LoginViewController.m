@@ -33,12 +33,20 @@
     [_loginBtn.layer setCornerRadius:5.0];
 }
 
+/**
+ *  点击登录的按钮
+ *
+ *  @param sender 被点击的按钮
+ */
 - (IBAction)clickLoginBtn:(UIButton *)sender {
     if (![_userNameLbl.text isEqualToString:@""] && ![_passwdLbl.text isEqualToString:@""]) {
         [self showHUDWithTitle:@"正在登陆中..."];
         [BmobUser loginWithUsernameInBackground:_userNameLbl.text password:_passwdLbl.text block:^(BmobUser *user, NSError *error) {
             [self hideHUD];
             if (user || error == nil) {
+                /**
+                 如果正确，跳入聊天界面
+                 */
                 TalkMainViewController *view = [[TalkMainViewController alloc]init];
                 view.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:view animated:YES];

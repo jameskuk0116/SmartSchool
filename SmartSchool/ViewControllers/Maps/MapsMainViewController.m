@@ -27,17 +27,38 @@
     // Do any additional setup after loading the view from its nib.
     [self setTitle:@"地 图"];
     
+    /**
+     初始化
+     */
     _dataArr = [[NSMutableArray alloc]init];
     _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, _viewForShow.frame.size.width, _viewForShow.frame.size.height)];
     _mapView.scrollEnabled = YES;
     [_viewForShow addSubview:_mapView];
     
+    /**
+     *  地图描边
+     */
     [self setRegion];
+    
+    /**
+     *  获取Buliding数据
+     */
     [self getData];
+    
+    /**
+     *  获取用户地理位置
+     */
     [self getUserLoc];
+    
+    /**
+     *  设置定位到学校按钮
+     */
     [self setGoToSchoolBtn];
 }
 
+/**
+ *  设置定位到学校按钮
+ */
 -(void)setGoToSchoolBtn{
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width- (0 + 20 + K_GotoSchoolBtn_width), [UIScreen mainScreen].bounds.size.height - (49 + 64 + 20 + K_GotoSchoolBtn_Hight), K_GotoSchoolBtn_width, K_GotoSchoolBtn_Hight)];
     [btn setTitle:@"去学校" forState:UIControlStateNormal];
@@ -50,6 +71,9 @@
     [self.view addSubview:btn];
 }
 
+/**
+ *  点击去学校按钮触发事件
+ */
 -(void)goSchool{
     /**
      *  地图中心点设定
@@ -61,6 +85,9 @@
     _mapView.zoomLevel = 17;
 }
 
+/**
+ *  开始定位
+ */
 -(void)getUserLoc{
     //设置定位精确度，默认：kCLLocationAccuracyBest
     [BMKLocationService setLocationDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
@@ -73,6 +100,7 @@
     //启动LocationService
     [_locService startUserLocationService];
 }
+
 /**
  *  描出学校边界
  */
@@ -103,6 +131,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ *  获取建筑数据
+ */
 -(void)getData{
     [self showHUDWithTitle:@"正在加载中..."];
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"Buliding"];
@@ -115,6 +146,9 @@
     }];
 }
 
+/**
+ *  设置切换条
+ */
 -(void)setSegmentController{
     NSMutableArray *titleNameArr = [[NSMutableArray alloc]init];
     for (BmobObject *obj in _dataArr) {
@@ -207,6 +241,11 @@
     return nil;
 }
 
+/**
+ *  切换条回调
+ *
+ *  @param segmentedControl 切换条对象
+ */
 - (void)segmentedControlChangedValue:(HMSegmentedControl *)segmentedControl {
     NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
     BmobObject *obj = _dataArr[segmentedControl.selectedSegmentIndex];
@@ -225,6 +264,7 @@
     [_mapView addAnnotation:_annotation];
 }
 
+//处理位置坐标更新
 - (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
 {
     //NSLog(@"heading is %@",userLocation.heading);

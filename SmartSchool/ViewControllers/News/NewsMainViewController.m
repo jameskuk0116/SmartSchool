@@ -15,8 +15,19 @@
 
 @interface NewsMainViewController ()<UITableViewDelegate,UITableViewDataSource,ImagePlayerViewDelegate>
 {
+    /**
+     *  新闻数组
+     */
     NSMutableArray *_newsArr;
+    
+    /**
+     *  图片轮播器
+     */
     ImagePlayerView *_imagePlayerView;
+    
+    /**
+     *  轮播器使用的数组
+     */
     NSMutableArray *_imgArr;
 }
 @end
@@ -26,17 +37,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    /**
+     *  设置标题
+     */
     [self setTitle:@"新 闻"];
+    
+    /**
+     *  设置UI和对象初始化
+     */
+    [self setUI];
+
+    /**
+     *  获取数据
+     */
     [self getData];
+    [self getDataWithStart:0];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)setUI{
+    /**
+     初始化
+     */
     _newsArr = [[NSMutableArray alloc]init];
     _imgArr = [[NSMutableArray alloc]init];
     _imageURLs = [[NSMutableArray alloc]init];
     
+    /**
+     去除tableview的plain样式多余的分割线和group样式默认的头部
+     */
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(CGFLOAT_MIN,CGFLOAT_MIN,CGFLOAT_MIN, CGFLOAT_MIN)];
     [view setBackgroundColor:[UIColor clearColor]];
     [_tableView setTableHeaderView:view];
     [_tableView setTableFooterView:view];
     
+    
+    /**
+     设置imagePlayerView
+     */
     _imagePlayerView = [[ImagePlayerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
     _imagePlayerView.imagePlayerViewDelegate = self;
     // set auto scroll interval to x seconds
@@ -51,35 +93,42 @@
     // adjust edgeInset
     _imagePlayerView.edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     
-    
+    /**
+     *  设置刷新头部
+     */
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
         [self getDataWithStart:0];
     }];
     
+    /**
+     *  设置加载更多尾部
+     */
     [self.tableView addLegendFooterWithRefreshingBlock:^{
         // 进入刷新状态后会自动调用这个block
         NSString *count = [NSString stringWithFormat:@"%lu",(unsigned long)_newsArr.count];
         [self getDataWithStart:[count intValue]];
     }];
-    
-    [self getDataWithStart:0];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:YES];
+    
+    /**
+     *  添加页面切换动画
+     */
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.2];
     [transition setType:@"fromBottom"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
 }
 
+/**
+ *  获取新闻数据
+ *
+ *  @param start 分页，要跳过多少数据
+ */
 -(void)getDataWithStart:(int)start{
     [self showHUDWithTitle:@"正在加载中..."];
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"News"];
@@ -88,17 +137,31 @@
     [bquery setSkip:start];
     //查找表的数据
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        /**
+         *  隐藏HUD
+         */
         [self hideHUD];
+        
+        /**
+         *  停止刷新
+         */
         [self.tableView.header endRefreshing];
         [self.tableView.footer endRefreshing];
         if (start == 0) {
             [_newsArr removeAllObjects];
         }
         [_newsArr addObjectsFromArray:array];
+        
+        /**
+         *  拿到数据，刷新列表
+         */
         [_tableView reloadData];
     }];
 }
 
+/**
+ *  获取轮播器数据
+ */
 -(void)getData{
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"News"];
     [bquery orderByDescending:@"createdAt"];
@@ -114,10 +177,15 @@
             [_imageURLs addObject:url];
         }
         [_imgArr addObjectsFromArray:array];
+        
+        /**
+         *  刷新轮播器
+         */
         [_imagePlayerView reloadData];
     }];
 }
 
+#pragma mark - tableView代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return _newsArr.count + 1;
 }
@@ -140,6 +208,7 @@
         cell =[[[NSBundle mainBundle] loadNibNamed:@"NewsTableViewCell" owner:self options:nil] objectAtIndex:0];
         }
         cell.NewsName.text = [obj objectForKey:@"NewsName"];
+        
         //实例化一个NSDateFormatter对象
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         //设定时间格式,这里可以设置成自己需要的格式
