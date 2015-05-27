@@ -31,7 +31,7 @@
      初始化
      */
     _dataArr = [[NSMutableArray alloc]init];
-    _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, _viewForShow.frame.size.width, _viewForShow.frame.size.height)];
+    _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64-49)];
     _mapView.scrollEnabled = YES;
     [_viewForShow addSubview:_mapView];
     

@@ -28,7 +28,7 @@
 }
 
 -(void)setUI{
-    [self setTitle:@"登 陆"];
+    [self setTitle:@"聊 天"];
     [_loginBtn.layer setMasksToBounds:YES];
     [_loginBtn.layer setCornerRadius:5.0];
 }
